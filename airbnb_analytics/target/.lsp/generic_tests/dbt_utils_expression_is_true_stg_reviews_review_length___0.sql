@@ -1,0 +1,1 @@
+{{ dbt_utils.test_expression_is_true(column_name="review_length", expression="> 0", model=get_where_subquery(ref('stg_reviews'))) }}

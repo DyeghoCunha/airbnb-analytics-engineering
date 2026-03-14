@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="is_bookable", model=get_where_subquery(ref('stg_listings')), quote=false, values=[true,false]) }}

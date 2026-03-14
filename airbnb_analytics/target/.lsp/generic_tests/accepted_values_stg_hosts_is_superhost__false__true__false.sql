@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="is_superhost", model=get_where_subquery(ref('stg_hosts')), quote=false, values=[true,false]) }}

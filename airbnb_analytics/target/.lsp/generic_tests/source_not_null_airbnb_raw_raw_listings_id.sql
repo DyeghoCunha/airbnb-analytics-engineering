@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="id", model=get_where_subquery(source('airbnb_raw', 'raw_listings'))) }}

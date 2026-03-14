@@ -1,0 +1,971 @@
+[0m16:54:02.401249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9CA1D7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9FF93890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9FF93770>]}
+[0m16:54:02.406252 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 16:54:02.407253 | 16f92aca-1a21-4abe-9287-d0f2708a7e5c ==============================
+[0m16:54:02.407253 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:54:02.408251 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Dyegho\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m16:54:02.431789 [info ] [MainThread]: dbt version: 1.11.6
+[0m16:54:02.432790 [info ] [MainThread]: python version: 3.12.10
+[0m16:54:02.432790 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m16:54:02.433790 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:54:02.522221 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:54:02.522221 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:54:02.522221 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:54:03.683023 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
+[0m16:54:03.684021 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
+[0m16:54:03.684021 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m16:54:03.685064 [info ] [MainThread]: adapter type: databricks
+[0m16:54:03.685064 [info ] [MainThread]: adapter version: 1.8.5
+[0m16:54:03.791612 [info ] [MainThread]: Configuration:
+[0m16:54:03.792613 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:54:03.792613 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:54:03.793600 [info ] [MainThread]: Required dependencies:
+[0m16:54:03.793600 [debug] [MainThread]: Executing "git --help"
+[0m16:54:03.800134 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m16:54:03.801136 [info ] [MainThread]: Connection:
+[0m16:54:03.802136 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m16:54:03.803137 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651
+[0m16:54:03.804137 [info ] [MainThread]:   catalog: hive_metastore
+[0m16:54:03.805134 [info ] [MainThread]:   schema: airbnb
+[0m16:54:03.806135 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m16:54:04.227124 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1557466998800, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(15812, 5704), compute-name=) - Creating connection
+[0m16:54:04.227124 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m16:54:04.228124 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1557466998800, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(15812, 5704), compute-name=) - Acquired connection on thread (15812, 5704), using default compute resource
+[0m16:54:04.228124 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1557466998800, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(15812, 5704), compute-name=) - Checking idleness
+[0m16:54:04.228124 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1557466998800, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(15812, 5704), compute-name=) - Retrieving connection
+[0m16:54:04.229125 [debug] [MainThread]: Using databricks connection "debug"
+[0m16:54:04.229125 [debug] [MainThread]: On debug: select 1 as id
+[0m16:54:04.229125 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:54:04.975878 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=0.7102346420288086/900.0, error-message=, http-code=None, method=OpenSession, no-retry-reason=non-retryable error, original-exception=Received 403 - FORBIDDEN. Confirm your authentication credentials., query-id=None, session-id=None
+[0m16:54:04.977879 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server
+[0m16:54:04.978878 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1557466998800, session-id=None, name=debug, idle-time=0.00099945068359375s, acquire-count=0, language=None, thread-identifier=(15812, 5704), compute-name=) - Released connection
+[0m16:54:04.978878 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:54:04.979881 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:54:04.980879 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m16:54:04.984870 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    Error during request to server
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:54:04.986866 [debug] [MainThread]: Command `dbt debug` failed at 16:54:04.986866 after 2.84 seconds
+[0m16:54:04.987868 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:54:04.987868 [debug] [MainThread]: On debug: No close available on handle
+[0m16:54:04.988870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9CA1D7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9FE7D3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016A9D4D3AA0>]}
+[0m16:54:04.988870 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m16:54:04.989869 [debug] [MainThread]: Flushing usage events
+[0m16:54:34.337165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F381A6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F381A78C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F381A5430>]}
+[0m16:54:34.342688 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 16:54:34.342688 | f07768b7-b544-48e6-8cab-b6314cae09d7 ==============================
+[0m16:54:34.342688 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:54:34.343704 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Dyegho\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m16:54:34.369020 [info ] [MainThread]: dbt version: 1.11.6
+[0m16:54:34.370021 [info ] [MainThread]: python version: 3.12.10
+[0m16:54:34.371019 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m16:54:34.371019 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:54:34.458847 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:54:34.458847 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:54:34.458847 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:54:35.565285 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
+[0m16:54:35.566270 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
+[0m16:54:35.566270 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m16:54:35.567271 [info ] [MainThread]: adapter type: databricks
+[0m16:54:35.567271 [info ] [MainThread]: adapter version: 1.8.5
+[0m16:54:35.674846 [info ] [MainThread]: Configuration:
+[0m16:54:35.674846 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:54:35.675846 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:54:35.675846 [info ] [MainThread]: Required dependencies:
+[0m16:54:35.675846 [debug] [MainThread]: Executing "git --help"
+[0m16:54:35.680847 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m16:54:35.681848 [info ] [MainThread]: Connection:
+[0m16:54:35.682847 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m16:54:35.682847 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651
+[0m16:54:35.683846 [info ] [MainThread]:   catalog: hive_metastore
+[0m16:54:35.684846 [info ] [MainThread]:   schema: airbnb
+[0m16:54:35.684846 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m16:54:35.927047 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2333688508736, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(24148, 15148), compute-name=) - Creating connection
+[0m16:54:35.927047 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m16:54:35.928063 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2333688508736, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(24148, 15148), compute-name=) - Acquired connection on thread (24148, 15148), using default compute resource
+[0m16:54:35.928063 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2333688508736, session-id=None, name=debug, idle-time=0.0010156631469726562s, acquire-count=1, language=None, thread-identifier=(24148, 15148), compute-name=) - Checking idleness
+[0m16:54:35.928063 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2333688508736, session-id=None, name=debug, idle-time=0.0010156631469726562s, acquire-count=1, language=None, thread-identifier=(24148, 15148), compute-name=) - Retrieving connection
+[0m16:54:35.928063 [debug] [MainThread]: Using databricks connection "debug"
+[0m16:54:35.929048 [debug] [MainThread]: On debug: select 1 as id
+[0m16:54:35.929048 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:54:36.631138 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=0.6816937923431396/900.0, error-message=, http-code=None, method=OpenSession, no-retry-reason=non-retryable error, original-exception=Received 403 - FORBIDDEN. Confirm your authentication credentials., query-id=None, session-id=None
+[0m16:54:36.633138 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server
+[0m16:54:36.633138 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2333688508736, session-id=None, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(24148, 15148), compute-name=) - Released connection
+[0m16:54:36.634136 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:54:36.635136 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:54:36.635136 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m16:54:36.643133 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    Error during request to server
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:54:36.644134 [debug] [MainThread]: Command `dbt debug` failed at 16:54:36.644134 after 2.44 seconds
+[0m16:54:36.645137 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:54:36.645137 [debug] [MainThread]: On debug: No close available on handle
+[0m16:54:36.646136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F37BA4BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F37B60320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F37E27E00>]}
+[0m16:54:36.646136 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m16:54:36.646136 [debug] [MainThread]: Flushing usage events
+[0m17:04:41.742362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C6051BFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C6051A060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C600D5280>]}
+[0m17:04:41.747363 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:04:41.748364 | 6c273e9e-9048-427f-b5b3-a9c70c5231ca ==============================
+[0m17:04:41.748364 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:04:41.749363 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Dyegho\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m17:04:41.772364 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:04:41.772364 [info ] [MainThread]: python version: 3.12.10
+[0m17:04:41.773359 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:04:41.774361 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:04:41.778382 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:04:41.779368 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
+[0m17:04:41.780370 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
+[0m17:04:41.780370 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m17:04:41.893796 [info ] [MainThread]: Configuration:
+[0m17:04:41.894795 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m17:04:41.894795 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:04:41.895793 [info ] [MainThread]: Required dependencies:
+[0m17:04:41.895793 [debug] [MainThread]: Executing "git --help"
+[0m17:04:41.900794 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m17:04:41.901798 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m17:04:41.901798 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m17:04:41.902793 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m17:04:41.902793 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m17:04:41.903794 [debug] [MainThread]: Command `dbt debug` failed at 17:04:41.903794 after 0.43 seconds
+[0m17:04:41.904796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C60C37A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C60CA7BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026C608448F0>]}
+[0m17:04:41.904796 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:04:41.904796 [debug] [MainThread]: Flushing usage events
+[0m17:05:17.780993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352C67CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352C67D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352C67E90>]}
+[0m17:05:17.784992 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:05:17.784992 | cb34c81c-be68-480a-a05f-69e07bf64a72 ==============================
+[0m17:05:17.784992 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:05:17.786243 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m17:05:17.806139 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:05:17.807137 [info ] [MainThread]: python version: 3.12.10
+[0m17:05:17.807137 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:05:17.808608 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:05:17.812164 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:05:17.813171 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\dbt_project
+[0m17:05:17.813171 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\profiles.yml
+[0m17:05:17.814171 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m17:05:17.917841 [info ] [MainThread]: Configuration:
+[0m17:05:17.917841 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m17:05:17.918826 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:05:17.918826 [info ] [MainThread]: Required dependencies:
+[0m17:05:17.919825 [debug] [MainThread]: Executing "git --help"
+[0m17:05:17.923826 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m17:05:17.924826 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m17:05:17.926993 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m17:05:17.926993 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m17:05:17.928000 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m17:05:17.929001 [debug] [MainThread]: Command `dbt debug` failed at 17:05:17.929001 after 0.27 seconds
+[0m17:05:17.929001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352889220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352C42660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019352E93AD0>]}
+[0m17:05:17.929001 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:05:17.930002 [debug] [MainThread]: Flushing usage events
+[0m17:05:39.255393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFEB949700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFEB0F53D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFEB0F4AA0>]}
+[0m17:05:39.260397 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:05:39.261397 | 031e4d03-a3f2-47c9-acd1-c15380aa28bd ==============================
+[0m17:05:39.261397 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:05:39.262396 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m17:05:39.287396 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:05:39.288394 [info ] [MainThread]: python version: 3.12.10
+[0m17:05:39.288394 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:05:39.289396 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:05:39.292395 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:05:39.381091 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:05:39.382092 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:05:39.382092 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:05:40.635518 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:05:40.636338 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\dbt_project
+[0m17:05:40.637340 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\profiles.yml
+[0m17:05:40.637340 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m17:05:40.638339 [info ] [MainThread]: adapter type: databricks
+[0m17:05:40.638339 [info ] [MainThread]: adapter version: 1.8.5
+[0m17:05:40.765891 [info ] [MainThread]: Configuration:
+[0m17:05:40.766911 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:05:40.767768 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:05:40.767768 [info ] [MainThread]: Required dependencies:
+[0m17:05:40.768775 [debug] [MainThread]: Executing "git --help"
+[0m17:05:40.773812 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m17:05:40.773812 [info ] [MainThread]: Connection:
+[0m17:05:40.774776 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m17:05:40.774776 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651
+[0m17:05:40.775776 [info ] [MainThread]:   catalog: workspace
+[0m17:05:40.775776 [info ] [MainThread]:   schema: airbnb
+[0m17:05:40.776801 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m17:05:41.030756 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(23008, 19144), compute-name=) - Creating connection
+[0m17:05:41.031769 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:05:41.031769 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(23008, 19144), compute-name=) - Acquired connection on thread (23008, 19144), using default compute resource
+[0m17:05:41.031769 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(23008, 19144), compute-name=) - Checking idleness
+[0m17:05:41.031769 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(23008, 19144), compute-name=) - Retrieving connection
+[0m17:05:41.032755 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:05:41.032755 [debug] [MainThread]: On debug: select 1 as id
+[0m17:05:41.032755 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:05:42.011351 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=01f11fe1-2d9b-11de-aefc-3d7915f79294, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(23008, 19144), compute-name=) - Connection created
+[0m17:05:42.011351 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-2d9b-11de-aefc-3d7915f79294, command-id=Unknown) - Created cursor
+[0m17:05:59.818891 [debug] [MainThread]: SQL status: OK in 18.790 seconds
+[0m17:05:59.820737 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-2d9b-11de-aefc-3d7915f79294, command-id=01f11fe1-2dce-1785-92a5-366aed39c0e2) - Closing cursor
+[0m17:06:00.155763 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1922239442160, session-id=01f11fe1-2d9b-11de-aefc-3d7915f79294, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(23008, 19144), compute-name=) - Released connection
+[0m17:06:00.156764 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:06:00.156764 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:06:00.157765 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m17:06:00.159767 [debug] [MainThread]: Command `dbt debug` failed at 17:06:00.158765 after 21.09 seconds
+[0m17:06:00.159767 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:06:00.160762 [debug] [MainThread]: On debug: Close
+[0m17:06:00.160762 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f11fe1-2d9b-11de-aefc-3d7915f79294) - Closing connection
+[0m17:06:00.357211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF8E5D06E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFEBC5BF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFE8F72240>]}
+[0m17:06:00.358210 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:06:00.358210 [debug] [MainThread]: Flushing usage events
+[0m17:07:24.407910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C09BFB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C26E4740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C09BE030>]}
+[0m17:07:24.413870 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:07:24.413870 | 0b95ad90-58aa-4edc-9b3a-4d5137c2c774 ==============================
+[0m17:07:24.413870 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:07:24.414870 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\dbt_project\\logs'}
+[0m17:07:24.442869 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:07:24.443872 [info ] [MainThread]: python version: 3.12.10
+[0m17:07:24.444870 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:07:24.444870 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:07:24.447869 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:07:24.530649 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:07:24.531663 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:07:24.531663 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:07:25.704130 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m17:07:25.705129 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\dbt_project
+[0m17:07:25.705129 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\profiles.yml
+[0m17:07:25.706129 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project\dbt_project.yml
+[0m17:07:25.706377 [info ] [MainThread]: adapter type: databricks
+[0m17:07:25.706377 [info ] [MainThread]: adapter version: 1.8.5
+[0m17:07:25.812962 [info ] [MainThread]: Configuration:
+[0m17:07:25.813976 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:07:25.814963 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:07:25.814963 [info ] [MainThread]: Required dependencies:
+[0m17:07:25.814963 [debug] [MainThread]: Executing "git --help"
+[0m17:07:25.844659 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:07:25.845684 [debug] [MainThread]: STDERR: "b''"
+[0m17:07:25.845684 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:07:25.846658 [info ] [MainThread]: Connection:
+[0m17:07:25.846658 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m17:07:25.847657 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651
+[0m17:07:25.847657 [info ] [MainThread]:   catalog: workspace
+[0m17:07:25.847657 [info ] [MainThread]:   schema: airbnb
+[0m17:07:25.848656 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m17:07:26.100393 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(6940, 32716), compute-name=) - Creating connection
+[0m17:07:26.101713 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:07:26.101713 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(6940, 32716), compute-name=) - Acquired connection on thread (6940, 32716), using default compute resource
+[0m17:07:26.101713 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(6940, 32716), compute-name=) - Checking idleness
+[0m17:07:26.101713 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(6940, 32716), compute-name=) - Retrieving connection
+[0m17:07:26.103147 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:07:26.103147 [debug] [MainThread]: On debug: select 1 as id
+[0m17:07:26.103147 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:07:26.883971 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=01f11fe1-6c30-1f03-a29d-5f46a2ae3b04, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(6940, 32716), compute-name=) - Connection created
+[0m17:07:26.884970 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-6c30-1f03-a29d-5f46a2ae3b04, command-id=Unknown) - Created cursor
+[0m17:07:27.589910 [debug] [MainThread]: SQL status: OK in 1.490 seconds
+[0m17:07:27.590896 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-6c30-1f03-a29d-5f46a2ae3b04, command-id=01f11fe1-6c51-192e-b3b9-3672febf55c0) - Closing cursor
+[0m17:07:27.591910 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1485612525104, session-id=01f11fe1-6c30-1f03-a29d-5f46a2ae3b04, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(6940, 32716), compute-name=) - Released connection
+[0m17:07:27.592899 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:07:27.593905 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:07:27.594899 [debug] [MainThread]: Command `dbt debug` succeeded at 17:07:27.594899 after 3.38 seconds
+[0m17:07:27.595902 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:07:27.595902 [debug] [MainThread]: On debug: Close
+[0m17:07:27.596900 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f11fe1-6c30-1f03-a29d-5f46a2ae3b04) - Closing connection
+[0m17:07:27.795988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C2224BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159E5682630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159E5682CC0>]}
+[0m17:07:27.796991 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:07:27.796991 [debug] [MainThread]: Flushing usage events
+[0m17:11:18.079846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E8FE14260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E91BCA480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E91BC9940>]}
+[0m17:11:18.085848 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:11:18.086850 | 68b6fad2-72ff-4fe1-a9e2-10a735830447 ==============================
+[0m17:11:18.086850 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:11:18.087849 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs'}
+[0m17:11:18.115374 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:11:18.116373 [info ] [MainThread]: python version: 3.12.10
+[0m17:11:18.117376 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:11:18.117376 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:11:18.122377 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
+[0m17:11:18.251905 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:11:18.252906 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:11:18.252906 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:11:19.516271 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
+[0m17:11:19.517233 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics
+[0m17:11:19.518290 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\profiles.yml
+[0m17:11:19.518290 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\dbt_project.yml
+[0m17:11:19.519291 [info ] [MainThread]: adapter type: databricks
+[0m17:11:19.519291 [info ] [MainThread]: adapter version: 1.8.5
+[0m17:11:19.622466 [info ] [MainThread]: Configuration:
+[0m17:11:19.623468 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:11:19.624467 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:11:19.624467 [info ] [MainThread]: Required dependencies:
+[0m17:11:19.625467 [debug] [MainThread]: Executing "git --help"
+[0m17:11:19.652456 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:11:19.653455 [debug] [MainThread]: STDERR: "b''"
+[0m17:11:19.653455 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:11:19.654471 [info ] [MainThread]: Connection:
+[0m17:11:19.655468 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m17:11:19.655468 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651
+[0m17:11:19.656484 [info ] [MainThread]:   catalog: workspace
+[0m17:11:19.656484 [info ] [MainThread]:   schema: airbnb
+[0m17:11:19.657453 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m17:11:19.941209 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28168, 31412), compute-name=) - Creating connection
+[0m17:11:19.942209 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:11:19.942209 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(28168, 31412), compute-name=) - Acquired connection on thread (28168, 31412), using default compute resource
+[0m17:11:19.942209 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(28168, 31412), compute-name=) - Checking idleness
+[0m17:11:19.943205 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=None, name=debug, idle-time=0.0009961128234863281s, acquire-count=1, language=None, thread-identifier=(28168, 31412), compute-name=) - Retrieving connection
+[0m17:11:19.943205 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:11:19.943205 [debug] [MainThread]: On debug: select 1 as id
+[0m17:11:19.943205 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:11:20.716324 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=01f11fe1-f791-1a85-83cf-ba36500bd0ad, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(28168, 31412), compute-name=) - Connection created
+[0m17:11:20.717336 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-f791-1a85-83cf-ba36500bd0ad, command-id=Unknown) - Created cursor
+[0m17:11:21.394811 [debug] [MainThread]: SQL status: OK in 1.450 seconds
+[0m17:11:21.395812 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f11fe1-f791-1a85-83cf-ba36500bd0ad, command-id=01f11fe1-f7b1-1199-aea5-fb52197339b0) - Closing cursor
+[0m17:11:21.396808 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2467716021712, session-id=01f11fe1-f791-1a85-83cf-ba36500bd0ad, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(28168, 31412), compute-name=) - Released connection
+[0m17:11:21.396808 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:11:21.397808 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:11:21.399813 [debug] [MainThread]: Command `dbt debug` succeeded at 17:11:21.398810 after 3.54 seconds
+[0m17:11:21.399813 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:11:21.399813 [debug] [MainThread]: On debug: Close
+[0m17:11:21.400816 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f11fe1-f791-1a85-83cf-ba36500bd0ad) - Closing connection
+[0m17:11:21.595833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E8FE54D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E8F563DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E9279D100>]}
+[0m17:11:21.596838 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:11:21.596838 [debug] [MainThread]: Flushing usage events
+[0m17:21:10.522467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C13F97A930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C142148A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C14206EAE0>]}
+[0m17:21:10.528468 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:21:10.528468 | 84d849ba-ec3c-4d2f-b9bf-1d13885da889 ==============================
+[0m17:21:10.528468 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:21:10.529467 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs'}
+[0m17:21:10.556029 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:21:10.556029 [info ] [MainThread]: python version: 3.12.10
+[0m17:21:10.557029 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:21:10.558037 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:21:10.562019 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics
+[0m17:21:10.563021 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\profiles.yml
+[0m17:21:10.564017 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\dbt_project.yml
+[0m17:21:10.683730 [info ] [MainThread]: Configuration:
+[0m17:21:10.684729 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m17:21:10.684729 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:21:10.685729 [info ] [MainThread]: Required dependencies:
+[0m17:21:10.686730 [debug] [MainThread]: Executing "git --help"
+[0m17:21:10.716900 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:21:10.717926 [debug] [MainThread]: STDERR: "b''"
+[0m17:21:10.717926 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:21:10.718898 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m17:21:10.719899 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:21:10.719899 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Could not find profile named 'airbnb_analytics'
+
+
+[0m17:21:10.721899 [debug] [MainThread]: Command `dbt debug` failed at 17:21:10.721899 after 0.46 seconds
+[0m17:21:10.721899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C1429CFCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C142447CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C142445F40>]}
+[0m17:21:10.722899 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:21:10.722899 [debug] [MainThread]: Flushing usage events
+[0m17:22:30.490828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE0612480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE0128710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE07952B0>]}
+[0m17:22:30.496901 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:22:30.496901 | e15281d2-1de5-4cf2-aa33-ac1c422ec883 ==============================
+[0m17:22:30.496901 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:22:30.497898 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs'}
+[0m17:22:30.522477 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:22:30.523497 [info ] [MainThread]: python version: 3.12.10
+[0m17:22:30.524477 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:22:30.524477 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:22:30.528491 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics
+[0m17:22:30.529476 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\profiles.yml
+[0m17:22:30.529476 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\dbt_project.yml
+[0m17:22:30.636807 [info ] [MainThread]: Configuration:
+[0m17:22:30.637792 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m17:22:30.638791 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:22:30.638791 [info ] [MainThread]: Required dependencies:
+[0m17:22:30.639792 [debug] [MainThread]: Executing "git --help"
+[0m17:22:30.670313 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:22:30.670313 [debug] [MainThread]: STDERR: "b''"
+[0m17:22:30.671319 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:22:30.672317 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m17:22:30.673317 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:22:30.673317 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Could not find profile named 'airbnb_analytics'
+
+
+[0m17:22:30.675317 [debug] [MainThread]: Command `dbt debug` failed at 17:22:30.675317 after 0.35 seconds
+[0m17:22:30.675317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE0A959D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE082DE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE0926630>]}
+[0m17:22:30.676318 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:22:30.676318 [debug] [MainThread]: Flushing usage events
+[0m17:22:50.007045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A771170B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A771F5FBC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A76FF347A0>]}
+[0m17:22:50.013053 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 17:22:50.014055 | 659d023d-b3a8-41c0-aabf-64fda6febf4c ==============================
+[0m17:22:50.014055 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:22:50.015053 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs'}
+[0m17:22:50.037051 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:22:50.038060 [info ] [MainThread]: python version: 3.12.10
+[0m17:22:50.039060 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:22:50.040060 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:22:50.133335 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:22:50.133335 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:22:50.134327 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:22:51.355675 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics
+[0m17:22:51.356674 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\profiles.yml
+[0m17:22:51.356674 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\dbt_project.yml
+[0m17:22:51.357676 [info ] [MainThread]: adapter type: databricks
+[0m17:22:51.357676 [info ] [MainThread]: adapter version: 1.8.5
+[0m17:22:51.469840 [info ] [MainThread]: Configuration:
+[0m17:22:51.470838 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:22:51.471837 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:22:51.471837 [info ] [MainThread]: Required dependencies:
+[0m17:22:51.472839 [debug] [MainThread]: Executing "git --help"
+[0m17:22:51.498162 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:22:51.499161 [debug] [MainThread]: STDERR: "b''"
+[0m17:22:51.499161 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:22:51.500162 [info ] [MainThread]: Connection:
+[0m17:22:51.501160 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m17:22:51.501160 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651>
+[0m17:22:51.502160 [info ] [MainThread]:   catalog: workspace
+[0m17:22:51.502160 [info ] [MainThread]:   schema: airbnb
+[0m17:22:51.503160 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m17:22:51.767301 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2918201712016, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(4312, 20616), compute-name=) - Creating connection
+[0m17:22:51.768301 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:22:51.769313 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2918201712016, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(4312, 20616), compute-name=) - Acquired connection on thread (4312, 20616), using default compute resource
+[0m17:22:51.769313 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2918201712016, session-id=None, name=debug, idle-time=0.001012563705444336s, acquire-count=1, language=None, thread-identifier=(4312, 20616), compute-name=) - Checking idleness
+[0m17:22:51.769313 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2918201712016, session-id=None, name=debug, idle-time=0.001012563705444336s, acquire-count=1, language=None, thread-identifier=(4312, 20616), compute-name=) - Retrieving connection
+[0m17:22:51.770309 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:22:51.770309 [debug] [MainThread]: On debug: select 1 as id
+[0m17:22:51.770309 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:34:10.623326 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2918201712016, session-id=None, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(4312, 20616), compute-name=) - Released connection
+[0m17:34:10.624337 [error] [MainThread]: Encountered an error:
+
+[0m17:34:10.874059 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\spark\impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\utils.py", line 78, in wrapper
+    return func(*new_args, **new_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\impl.py", line 230, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\base\impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\connections.py", line 629, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\connections.py", line 600, in add_query
+    cursor = cast(DatabricksSQLConnectionWrapper, connection.handle).cursor()
+                                                  ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\connections.py", line 1080, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\base\connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\adapters\databricks\connections.py", line 1044, in connect
+    conn = dbsql.connect(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\__init__.py", line 90, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\client.py", line 233, in __init__
+    self._open_session_resp = self.thrift_backend.open_session(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\thrift_backend.py", line 578, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\thrift_backend.py", line 495, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\thrift_backend.py", line 405, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\thrift_api\TCLIService\TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\thrift_api\TCLIService\TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\databricks\sql\auth\thrift_http_client.py", line 177, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 13 more times]
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 940, in urlopen
+    retries.sleep(response)
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 363, in sleep
+    self._sleep_backoff()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 347, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m17:34:10.877078 [debug] [MainThread]: Command `dbt debug` failed at 17:34:10.877078 after 681.01 seconds
+[0m17:34:10.877078 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:34:10.878073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A77200C740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A714F8A300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A714E68080>]}
+[0m17:34:10.878073 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m17:34:10.879073 [debug] [MainThread]: Flushing usage events
+[0m17:34:59.605663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AE3B02A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AE3B03260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AE3B02A80>]}
+
+
+============================== 17:34:59.610920 | 975aca76-cd17-4d76-80bf-97b33fab4d2d ==============================
+[0m17:34:59.610920 [info ] [MainThread]: Running with dbt=1.8.7
+[0m17:34:59.611920 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:34:59.637343 [info ] [MainThread]: dbt version: 1.8.7
+[0m17:34:59.637343 [info ] [MainThread]: python version: 3.12.10
+[0m17:34:59.638344 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
+[0m17:34:59.639344 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:34:59.772375 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:34:59.773376 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:34:59.773376 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:35:01.106317 [info ] [MainThread]: Using profiles dir at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics
+[0m17:35:01.108316 [info ] [MainThread]: Using profiles.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\profiles.yml
+[0m17:35:01.108316 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics\dbt_project.yml
+[0m17:35:01.109317 [info ] [MainThread]: adapter type: databricks
+[0m17:35:01.109317 [info ] [MainThread]: adapter version: 1.8.5
+[0m17:35:01.210085 [info ] [MainThread]: Configuration:
+[0m17:35:01.211083 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:35:01.211083 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:35:01.212083 [info ] [MainThread]: Required dependencies:
+[0m17:35:01.212083 [debug] [MainThread]: Executing "git --help"
+[0m17:35:01.245084 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:35:01.246083 [debug] [MainThread]: STDERR: "b''"
+[0m17:35:01.246083 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:35:01.247084 [info ] [MainThread]: Connection:
+[0m17:35:01.247084 [info ] [MainThread]:   host: dbc-bf88daea-a04e.cloud.databricks.com
+[0m17:35:01.248084 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/8b8af9d912dae651>
+[0m17:35:01.249083 [info ] [MainThread]:   catalog: workspace
+[0m17:35:01.249083 [info ] [MainThread]:   schema: airbnb
+[0m17:35:01.250084 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m17:35:01.519305 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2658110777360, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(9356, 18332), compute-name=) - Creating connection
+[0m17:35:01.520308 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:35:01.520308 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2658110777360, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(9356, 18332), compute-name=) - Acquired connection on thread (9356, 18332), using default compute resource
+[0m17:35:01.520308 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2658110777360, session-id=None, name=debug, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(9356, 18332), compute-name=) - Checking idleness
+[0m17:35:01.521308 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2658110777360, session-id=None, name=debug, idle-time=0.0010004043579101562s, acquire-count=1, language=None, thread-identifier=(9356, 18332), compute-name=) - Retrieving connection
+[0m17:35:01.521308 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:35:01.521308 [debug] [MainThread]: On debug: select 1 as id
+[0m17:35:01.522307 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:50.470602 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=888.919835805893/900.0, error-message=, http-code=None, method=OpenSession, no-retry-reason=non-retryable error, original-exception=Retry request would exceed Retry policy max retry duration of 900.0 seconds, query-id=None, session-id=None
+[0m17:49:50.471602 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server
+[0m17:49:50.472602 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=2658110777360, session-id=None, name=debug, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(9356, 18332), compute-name=) - Released connection
+[0m17:49:50.472602 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:49:50.473602 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:49:50.473602 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    Error during request to server
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:49:50.475608 [debug] [MainThread]: Command `dbt debug` failed at 17:49:50.474609 after 890.98 seconds
+[0m17:49:50.475608 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:49:50.476602 [debug] [MainThread]: On debug: No close available on handle
+[0m17:49:50.476602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AE36FDC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A864A4830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A864DED50>]}
+[0m17:49:50.477603 [debug] [MainThread]: Flushing usage events
+[0m19:33:01.642699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021700BD2450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021703BC49B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021703BC7BF0>]}
+
+
+============================== 19:33:01.647714 | 18c47fe7-02fe-439b-b262-9b67dd34b87a ==============================
+[0m19:33:01.647714 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:33:01.648719 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:01.850358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '18c47fe7-02fe-439b-b262-9b67dd34b87a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021703BC49B0>]}
+[0m19:33:01.885655 [debug] [MainThread]: Set downloads directory='C:\Users\Dyegho\AppData\Local\Temp\dbt-downloads-ctqburk3'
+[0m19:33:01.886656 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:33:02.278858 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:33:02.281863 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:33:02.680617 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:33:02.690619 [error] [MainThread]: Encountered an error:
+Package dbt-labs/dbt_expectations was not found in the package index
+[0m19:33:02.693618 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 201, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 447, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 225, in run
+    self.lock()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 194, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\resolver.py", line 128, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 101, in resolved
+    self._check_in_index()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 80, in _check_in_index
+    raise PackageNotFoundError(self.package)
+dbt.exceptions.PackageNotFoundError: Package dbt-labs/dbt_expectations was not found in the package index
+
+[0m19:33:02.695617 [debug] [MainThread]: Command `dbt deps` failed at 19:33:02.695617 after 1.20 seconds
+[0m19:33:02.696616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217039FB740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217039D8470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021703BC7BF0>]}
+[0m19:33:02.697618 [debug] [MainThread]: Flushing usage events
+[0m19:33:18.292742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E508C657F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50BC86300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50BC86420>]}
+
+
+============================== 19:33:18.298799 | aa73a0f5-8a23-459c-8ae6-1061c818a2ac ==============================
+[0m19:33:18.298799 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:33:18.299905 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:18.467141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aa73a0f5-8a23-459c-8ae6-1061c818a2ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50B5E4380>]}
+[0m19:33:18.494656 [debug] [MainThread]: Set downloads directory='C:\Users\Dyegho\AppData\Local\Temp\dbt-downloads-s0bgcb4r'
+[0m19:33:18.495658 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:33:18.881693 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:33:18.883149 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:33:19.528689 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:33:19.537686 [error] [MainThread]: Encountered an error:
+Package dbt-labs/dbt_expectations was not found in the package index
+[0m19:33:19.540687 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 201, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 447, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 225, in run
+    self.lock()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 194, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\resolver.py", line 128, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 101, in resolved
+    self._check_in_index()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 80, in _check_in_index
+    raise PackageNotFoundError(self.package)
+dbt.exceptions.PackageNotFoundError: Package dbt-labs/dbt_expectations was not found in the package index
+
+[0m19:33:19.542134 [debug] [MainThread]: Command `dbt deps` failed at 19:33:19.542134 after 1.37 seconds
+[0m19:33:19.543145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50BAB5A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50BE2F110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50ADECA40>]}
+[0m19:33:19.543145 [debug] [MainThread]: Flushing usage events
+[0m19:33:29.172304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC51CCC530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC51CCC4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC51CCE3F0>]}
+
+
+============================== 19:33:29.176304 | a2468ec7-98fa-4e98-af34-5c97df781c44 ==============================
+[0m19:33:29.176304 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:33:29.177318 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:29.307678 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:33:29.308686 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:33:29.308686 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:33:30.710351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a2468ec7-98fa-4e98-af34-5c97df781c44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC749DA450>]}
+[0m19:33:30.772355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a2468ec7-98fa-4e98-af34-5c97df781c44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC749DB800>]}
+[0m19:33:30.773356 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m19:33:31.047080 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found 2 package(s) specified in packages.yml, but only 1 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m19:33:31.049085 [debug] [MainThread]: Command `dbt compile` failed at 19:33:31.048080 after 1.99 seconds
+[0m19:33:31.049085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC51D638C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC749DB800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC521C0EC0>]}
+[0m19:33:31.050080 [debug] [MainThread]: Flushing usage events
+[0m19:33:46.711130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE4046720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE3ACB2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE4046750>]}
+
+
+============================== 19:33:46.715129 | 8c30afbb-12ae-42da-a23a-24c3542d67c3 ==============================
+[0m19:33:46.715129 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:33:46.716130 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:46.884005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8c30afbb-12ae-42da-a23a-24c3542d67c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE46D4C80>]}
+[0m19:33:46.912834 [debug] [MainThread]: Set downloads directory='C:\Users\Dyegho\AppData\Local\Temp\dbt-downloads-2gt8933z'
+[0m19:33:46.913832 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:33:47.323039 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:33:47.325023 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:33:47.841977 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:33:47.852979 [error] [MainThread]: Encountered an error:
+Package dbt-labs/dbt_expectations was not found in the package index
+[0m19:33:47.854978 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 201, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 447, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 225, in run
+    self.lock()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 194, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\resolver.py", line 128, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 101, in resolved
+    self._check_in_index()
+  File "C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 80, in _check_in_index
+    raise PackageNotFoundError(self.package)
+dbt.exceptions.PackageNotFoundError: Package dbt-labs/dbt_expectations was not found in the package index
+
+[0m19:33:47.856977 [debug] [MainThread]: Command `dbt deps` failed at 19:33:47.856977 after 1.27 seconds
+[0m19:33:47.857981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE3FDBFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE4BB4470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021FE410BC80>]}
+[0m19:33:47.857981 [debug] [MainThread]: Flushing usage events
+[0m19:35:10.798693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF117B2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF3DDF140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF3DDE360>]}
+
+
+============================== 19:35:10.806176 | 9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d ==============================
+[0m19:35:10.806176 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:35:10.807214 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt deps', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:10.989587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF16C9880>]}
+[0m19:35:11.025574 [debug] [MainThread]: Set downloads directory='C:\Users\Dyegho\AppData\Local\Temp\dbt-downloads-eq14inmi'
+[0m19:35:11.026605 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:35:11.440017 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:35:11.442033 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:35:11.855792 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:35:11.865802 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m19:35:12.281606 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m19:35:12.284568 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m19:35:12.285567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF3DFA540>]}
+[0m19:35:12.288567 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m19:35:12.667710 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m19:35:12.682207 [info ] [MainThread]: Updating lock file in file path: D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics/package-lock.yml
+[0m19:35:12.765237 [debug] [MainThread]: Set downloads directory='C:\Users\Dyegho\AppData\Local\Temp\dbt-downloads-wb8ebzdz'
+[0m19:35:12.772233 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:35:14.151143 [info ] [MainThread]: Installed from version 1.1.1
+[0m19:35:14.152164 [info ] [MainThread]: Updated version available: 1.3.3
+[0m19:35:14.153145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF4064F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF4065970>]}
+[0m19:35:14.153145 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m19:35:15.123046 [info ] [MainThread]: Installed from version 0.10.1
+[0m19:35:15.124044 [info ] [MainThread]: Updated version available: 0.10.4
+[0m19:35:15.124044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF44840B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF4484320>]}
+[0m19:35:15.125045 [info ] [MainThread]: Installing calogica/dbt_date
+[0m19:35:15.626424 [info ] [MainThread]: Installed from version 0.10.1
+[0m19:35:15.627424 [info ] [MainThread]: Up to date!
+[0m19:35:15.627424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9e2efd75-1fc2-4e93-b8d4-c50ee4bb1b2d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF44842F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF4484080>]}
+[0m19:35:15.628425 [info ] [MainThread]: 
+[0m19:35:15.628425 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'calogica/dbt_expectations']                 
+Update your versions in packages.yml, then run dbt deps
+[0m19:35:15.632425 [debug] [MainThread]: Command `dbt deps` succeeded at 19:35:15.632425 after 5.05 seconds
+[0m19:35:15.632425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF3E48CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF16C9880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020AF2DDC8F0>]}
+[0m19:35:15.633426 [debug] [MainThread]: Flushing usage events
+[0m19:35:25.744005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F22431D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F22433740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F224333B0>]}
+
+
+============================== 19:35:25.750299 | a4fcf089-8635-4409-9ecb-280acd5e2431 ==============================
+[0m19:35:25.750299 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:35:25.750299 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:25.892017 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:35:25.893019 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:35:25.893019 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:35:27.251282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4fcf089-8635-4409-9ecb-280acd5e2431', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F224F25D0>]}
+[0m19:35:27.313356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4fcf089-8635-4409-9ecb-280acd5e2431', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F44BFE4B0>]}
+[0m19:35:27.314355 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m19:35:27.678562 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:35:27.680812 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:35:27.681833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a4fcf089-8635-4409-9ecb-280acd5e2431', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F1E738C50>]}
+[0m19:35:33.468455 [error] [MainThread]: Encountered an error:
+Compilation Error in model stg_hosts (models\silver\stg_hosts.sql)
+  expected token ',', got 'tags'
+    line 3
+      tags = ['silver','staging']
+[0m19:35:33.469759 [debug] [MainThread]: Command `dbt compile` failed at 19:35:33.469759 after 7.85 seconds
+[0m19:35:33.470791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2241A510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F44C5A060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F44FB0890>]}
+[0m19:35:33.470791 [debug] [MainThread]: Flushing usage events
+[0m19:35:57.202658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C53F9A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C49A8EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C53FB050>]}
+
+
+============================== 19:35:57.207655 | 9345ae64-6546-4c91-9700-f10035a02b34 ==============================
+[0m19:35:57.207655 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:35:57.208655 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:57.342814 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:35:57.342814 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:35:57.343816 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:35:58.683589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9345ae64-6546-4c91-9700-f10035a02b34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C55331A0>]}
+[0m19:35:58.744343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9345ae64-6546-4c91-9700-f10035a02b34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C55F2420>]}
+[0m19:35:58.745347 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m19:35:59.041877 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:35:59.042877 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:35:59.043877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9345ae64-6546-4c91-9700-f10035a02b34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159E7E2F770>]}
+[0m19:36:00.750509 [error] [MainThread]: Encountered an error:
+Compilation Error in model stg_listings (models\silver\stg_listings.sql)
+  expected token ',', got 'tags'
+    line 2
+      materialized = 'table' tags = ['silver','staging']
+[0m19:36:00.751507 [debug] [MainThread]: Command `dbt compile` failed at 19:36:00.751507 after 3.69 seconds
+[0m19:36:00.751507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159C49F6B40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159E809C7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159E8108800>]}
+[0m19:36:00.752524 [debug] [MainThread]: Flushing usage events
+[0m19:36:23.983191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F31450AF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F31450AC00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F31553E690>]}
+
+
+============================== 19:36:23.989191 | 6c4f8d7d-7b67-492e-8444-4f2e31e04680 ==============================
+[0m19:36:23.989191 [info ] [MainThread]: Running with dbt=1.8.7
+[0m19:36:23.990189 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m19:36:24.126999 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:36:24.128016 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:36:24.128016 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:36:25.436402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F315996DE0>]}
+[0m19:36:25.488483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F337D4E8A0>]}
+[0m19:36:25.489599 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m19:36:25.763194 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m19:36:25.764216 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:36:25.765195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F314C47260>]}
+[0m19:36:27.584219 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m19:36:27.584219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F3382E0290>]}
+[0m19:36:27.905390 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 4 unused configuration paths:
+- models.airbnb_analytics.gold
+- models.airbnb_analytics.bronze
+- models.airbnb_analytics.gold.fact_bookings
+- models.airbnb_analytics.gold.fact_reviews
+[0m19:36:27.918386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F33852E8A0>]}
+[0m19:36:28.071351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F3386E8F50>]}
+[0m19:36:28.072352 [info ] [MainThread]: Found 3 models, 37 data tests, 3 sources, 980 macros
+[0m19:36:28.072352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c4f8d7d-7b67-492e-8444-4f2e31e04680', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F3384E2390>]}
+[0m19:36:28.076686 [info ] [MainThread]: 
+[0m19:36:28.077683 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=3243647077648, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(22244, 6464), compute-name=) - Creating connection
+[0m19:36:28.078681 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m19:36:28.078681 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=3243647077648, session-id=None, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(22244, 6464), compute-name=) - Acquired connection on thread (22244, 6464), using default compute resource
+[0m19:36:28.085678 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0s, acquire-count=0, language=None, thread-identifier=(22244, 16788), compute-name=) - Creating connection
+[0m19:36:28.086678 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_silver'
+[0m19:36:28.086678 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(22244, 16788), compute-name=) - Acquired connection on thread (22244, 16788), using default compute resource
+[0m19:36:28.097679 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.011000394821166992s, acquire-count=1, language=None, thread-identifier=(22244, 16788), compute-name=) - Checking idleness
+[0m19:36:28.098678 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.01199960708618164s, acquire-count=1, language=None, thread-identifier=(22244, 16788), compute-name=) - Retrieving connection
+[0m19:36:28.098678 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.01199960708618164s, acquire-count=1, language=None, thread-identifier=(22244, 16788), compute-name=) - Checking idleness
+[0m19:36:28.098678 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=3243646084224, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.01199960708618164s, acquire-count=1, language=None, thread-identifier=(22244, 16788), compute-name=) - Retrieving connection
+[0m19:36:28.099696 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m19:36:28.099696 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_silver"
+[0m19:36:28.099696 [debug] [ThreadPool]: On list_workspace_airbnb_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_silver"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_silver'
+    
+  
+[0m19:36:28.100695 [debug] [ThreadPool]: Opening a new connection, currently in state init

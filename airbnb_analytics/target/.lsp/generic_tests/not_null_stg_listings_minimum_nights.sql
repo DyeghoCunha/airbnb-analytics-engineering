@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="minimum_nights", model=get_where_subquery(ref('stg_listings'))) }}

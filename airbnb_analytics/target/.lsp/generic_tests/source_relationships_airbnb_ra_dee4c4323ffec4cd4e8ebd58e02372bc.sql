@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="host_id", field="id", model=get_where_subquery(source('airbnb_raw', 'raw_listings')), to=source('airbnb_raw', 'raw_hosts')) }}

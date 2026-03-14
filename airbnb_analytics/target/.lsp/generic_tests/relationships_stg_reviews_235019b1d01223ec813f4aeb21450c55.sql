@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="listing_id", field="listing_id", model=get_where_subquery(ref('stg_reviews')), to=ref('stg_listings')) }}

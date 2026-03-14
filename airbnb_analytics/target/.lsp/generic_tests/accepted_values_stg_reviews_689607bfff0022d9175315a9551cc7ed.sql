@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="sentiment_category", model=get_where_subquery(ref('stg_reviews')), values=["Positive","Negative","Neutral","Unknown"]) }}

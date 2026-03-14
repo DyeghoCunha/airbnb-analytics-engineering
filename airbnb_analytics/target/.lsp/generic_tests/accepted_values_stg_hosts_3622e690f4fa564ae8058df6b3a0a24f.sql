@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="host_experience_level", model=get_where_subquery(ref('stg_hosts')), values=["New Host","Intermediate","Experienced","Unknown"]) }}

@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="days_as_host", model=get_where_subquery(ref('stg_hosts'))) }}

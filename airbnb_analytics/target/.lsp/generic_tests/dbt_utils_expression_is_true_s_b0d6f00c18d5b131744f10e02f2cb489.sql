@@ -1,0 +1,1 @@
+{{ dbt_utils.test_expression_is_true(column_name="minimum_nights", expression="BETWEEN 1 AND 365", model=get_where_subquery(ref('stg_listings'))) }}

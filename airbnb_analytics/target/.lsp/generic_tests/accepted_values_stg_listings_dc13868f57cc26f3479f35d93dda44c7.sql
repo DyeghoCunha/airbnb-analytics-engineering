@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="room_type_standardized", model=get_where_subquery(ref('stg_listings')), values=["Entire home/apt","Private room","Shared room","Hotel room","Other"]) }}
