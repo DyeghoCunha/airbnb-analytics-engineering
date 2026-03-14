@@ -1,0 +1,143 @@
+version: 2
+
+models:
+  - name: stg_hosts
+    description: "Staging layer for hosts with cleaned and standardized data"
+    columns:
+      - name: host_id
+        description: "Unique identifier for host (Primary Key)"
+        tests:
+          - unique
+          - not_null
+          
+      - name: host_name
+        description: "Standardized host name (trimmed and uppercase)"
+        tests:
+          - not_null
+          
+      - name: is_superhost
+        description: "Boolean flag indicating superhost status"
+        tests:
+          - accepted_values:
+              values: [true, false]
+              quote: false
+              
+      - name: host_created_at
+        description: "Timestamp when host account was created"
+        tests:
+          - not_null
+          
+      - name: days_as_host
+        description: "Number of days since host creation"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+              
+      - name: host_experience_level
+        description: "Categorization of host experience (New/Intermediate/Experienced)"
+        tests:
+          - accepted_values:
+              values: ['New Host', 'Intermediate', 'Experienced', 'Unknown']
+
+  - name: stg_listings
+    description: "Staging layer for listings with cleaned prices and standardized attributes"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for listing (Primary Key)"
+        tests:
+          - unique
+          - not_null
+          
+      - name: host_id
+        description: "Foreign key to hosts table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_hosts')
+              field: host_id
+              
+      - name: listing_name
+        description: "Cleaned listing name"
+        tests:
+          - not_null
+          
+      - name: room_type_standardized
+        description: "Standardized room type category"
+        tests:
+          - accepted_values:
+              values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room', 'Other']
+              
+      - name: price
+        description: "Cleaned listing price (decimal format)"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+              
+      - name: minimum_nights
+        description: "Minimum nights required for booking (validated)"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "BETWEEN 1 AND 365"
+              
+      - name: is_bookable
+        description: "Flag indicating if listing is currently bookable"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+              quote: false
+
+  - name: stg_reviews
+    description: "Staging layer for reviews with text analysis and temporal features"
+    columns:
+      - name: listing_id
+        description: "Foreign key to listings table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_listings')
+              field: listing_id
+              
+      - name: review_date
+        description: "Date when review was submitted"
+        tests:
+          - not_null
+          
+      - name: reviewer_name
+        description: "Name of the reviewer"
+        tests:
+          - not_null
+          
+      - name: review_comments
+        description: "Cleaned review text"
+        tests:
+          - not_null
+          
+      - name: review_length
+        description: "Character count of review"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+              
+      - name: word_count
+        description: "Approximate word count in review"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+              
+      - name: sentiment_category
+        description: "Categorized sentiment (Positive/Negative/Neutral)"
+        tests:
+          - accepted_values:
+              values: ['Positive', 'Negative', 'Neutral', 'Unknown']
+
+# Testes customizados entre modelos
+tests:
+  - name: test_hosts_have_listings
+    description: "Ensure all hosts in stg_hosts have at least one listing"
+    # Este é um exemplo de teste custom que você pode criar

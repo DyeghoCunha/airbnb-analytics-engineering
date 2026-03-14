@@ -1,0 +1,33 @@
+[0m16:37:30.196581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC820D4BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC820D4950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC820D48F0>]}
+[0m16:37:30.203851 [debug] [MainThread]: An error was encountered while trying to send an event
+
+
+============================== 16:37:30.203851 | 65236b6b-2710-4872-a352-9672a351e17a ==============================
+[0m16:37:30.203851 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:37:30.204905 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Dyegho\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:38:16.378870 [debug] [MainThread]: Starter project path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m16:38:16.421867 [info ] [MainThread]: 
+Your new dbt project "airbnb_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:38:16.422870 [info ] [MainThread]: Setting up your profile.
+[0m16:38:28.010313 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:38:28.011350 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:38:28.011350 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:53:30.144335 [info ] [MainThread]: Profile airbnb_analytics written to C:\Users\Dyegho\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:53:30.146337 [debug] [MainThread]: Command `dbt init` succeeded at 16:53:30.146337 after 960.16 seconds
+[0m16:53:30.146337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC821C3890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC826E1430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCA491D8E0>]}
+[0m16:53:30.147339 [debug] [MainThread]: An error was encountered while trying to send an event
+[0m16:53:30.147339 [debug] [MainThread]: Flushing usage events
