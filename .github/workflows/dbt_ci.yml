@@ -38,7 +38,7 @@ jobs:
       
       - name: Lint SQL files
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           sqlfluff lint models/ --dialect databricks --exclude-rules L034,L036
         continue-on-error: true # Não trava o pipeline se houver erros de estilo
 
@@ -79,19 +79,19 @@ jobs:
       
       - name: Install dbt dependencies
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt deps
       
       - name: Compile dbt models
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt compile --target ci
       
       - name: Upload compiled files
         uses: actions/upload-artifact@v4
         with:
           name: compiled-models
-          path: dbt_project/target/compiled/
+          path: airbnb_analytics/target/compiled/
 
   dbt-test:
     name: 🧪 Run dbt Tests
@@ -130,23 +130,23 @@ jobs:
       
       - name: Install dbt dependencies
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt deps
       
       - name: Run dbt tests on sources
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt test --select source:* --target ci
       
       - name: Run dbt tests on silver layer
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt test --select silver --target ci
       
       - name: Generate test results report
         if: always()
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt docs generate --target ci
       
       - name: Upload test results
@@ -154,7 +154,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dbt-test-results
-          path: dbt_project/target/run_results.json
+          path: airbnb_analytics/target/run_results.json
 
   dbt-build-silver:
     name: 🥈 Build Silver Layer
@@ -202,12 +202,12 @@ jobs:
       
       - name: Install dbt dependencies
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt deps
       
       - name: Build silver layer
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt build --select silver --target ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
 
   dbt-build-gold:
@@ -256,17 +256,17 @@ jobs:
       
       - name: Install dbt dependencies
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt deps
       
       - name: Build gold dimensions
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt build --select gold,tag:dimension --target ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
       
       - name: Build gold facts
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt build --select gold,tag:fact --target ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
 
   dbt-docs:
@@ -307,17 +307,17 @@ jobs:
       
       - name: Install dbt dependencies
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt deps
       
       - name: Generate dbt docs
         run: |
-          cd dbt_project
+          cd airbnb_analytics
           dbt docs generate --target prod
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # Atualizado para v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dbt_project/target
+          publish_dir: ./airbnb_analytics/target
           publish_branch: gh-pages

@@ -47,14 +47,14 @@ End-to-end analytics engineering project implementing a **Medallion Architecture
 airbnb-analytics-engineering/
 ├── .github/workflows/
 │   └── dbt_ci.yml           # CI/CD pipeline
-├── dbt_project/
+├── airbnb_analytics/
 │   ├── models/
 │   │   ├── bronze/          # Source definitions
 │   │   ├── silver/          # Staging models
 │   │   └── gold/            # Dimensional models
 │   ├── macros/              # Custom macros
 │   ├── tests/               # Data quality tests
-│   └── dbt_project.yml
+│   └── airbnb_analytics.yml
 ├── docs/
 ├── powerbi/
 └── README.md
@@ -92,7 +92,7 @@ pip install dbt-databricks==1.7.0
 
 4. **Install dbt packages**
 ```bash
-cd dbt_project
+cd airbnb_analytics
 dbt deps
 ```
 

@@ -41,13 +41,13 @@ Happy modeling!
 [0m08:49:34.706918 [info ] [MainThread]: python version: 3.12.10
 [0m08:49:34.707491 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:49:34.708063 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:49:34.709780 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:49:34.709780 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:49:34.710316 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:49:34.710871 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:49:34.711405 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:49:34.711405 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:49:34.711934 [info ] [MainThread]: Configuration:
 [0m08:49:34.711934 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:49:34.712472 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:49:34.712472 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:49:34.713003 [info ] [MainThread]: Required dependencies:
 [0m08:49:34.713537 [debug] [MainThread]: Executing "git --help"
 [0m08:49:34.749549 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -56,15 +56,15 @@ Happy modeling!
 
 [0m08:49:34.752064 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:49:34.752064 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:49:34.753062 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:49:34.753062 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:49:34.754061 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:49:34.756063 [debug] [MainThread]: Command `dbt debug` failed at 08:49:34.756063 after 0.24 seconds
 [0m08:49:34.756063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025EC7556AB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025EC7A20980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025EC7706DB0>]}
@@ -80,13 +80,13 @@ Runtime Error
 [0m08:50:00.723180 [info ] [MainThread]: python version: 3.12.10
 [0m08:50:00.724176 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:50:00.725175 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:50:00.726174 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:50:00.726174 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:50:00.728177 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:50:00.728177 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:50:00.729176 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:50:00.729176 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:50:00.729176 [info ] [MainThread]: Configuration:
 [0m08:50:00.730178 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:50:00.731179 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:50:00.731179 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:50:00.731179 [info ] [MainThread]: Required dependencies:
 [0m08:50:00.732178 [debug] [MainThread]: Executing "git --help"
 [0m08:50:00.779190 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -95,15 +95,15 @@ Runtime Error
 
 [0m08:50:00.781185 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:50:00.781185 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:50:00.782187 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:50:00.782187 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:50:00.782187 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:50:00.783185 [debug] [MainThread]: Command `dbt debug` failed at 08:50:00.783185 after 0.30 seconds
 [0m08:50:00.784185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164F3CBE8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164F3D67AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164F3D509E0>]}
@@ -118,13 +118,13 @@ Runtime Error
 [0m08:55:15.903460 [info ] [MainThread]: python version: 3.12.10
 [0m08:55:15.904537 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:55:15.905546 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:55:15.906577 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:55:15.906577 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:55:15.907883 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:55:15.908883 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:55:15.908883 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:55:15.908883 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:55:15.909883 [info ] [MainThread]: Configuration:
 [0m08:55:15.909883 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:55:15.910883 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:55:15.910883 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:55:15.911883 [info ] [MainThread]: Required dependencies:
 [0m08:55:15.911883 [debug] [MainThread]: Executing "git --help"
 [0m08:55:15.939883 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -133,15 +133,15 @@ Runtime Error
 
 [0m08:55:15.941881 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:55:15.941881 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:55:15.942882 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:55:15.942882 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:55:15.942882 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:55:15.944886 [debug] [MainThread]: Command `dbt debug` failed at 08:55:15.943883 after 0.19 seconds
 [0m08:55:15.944886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223AF41BC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223AFC85DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223A9E1FA70>]}
@@ -156,13 +156,13 @@ Runtime Error
 [0m08:57:23.052880 [info ] [MainThread]: python version: 3.12.10
 [0m08:57:23.053869 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:57:23.054867 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:57:23.055867 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:57:23.055867 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:57:23.057866 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:57:23.057866 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:57:23.058866 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:57:23.058866 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:57:23.059867 [info ] [MainThread]: Configuration:
 [0m08:57:23.060872 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:57:23.060872 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:57:23.060872 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:57:23.061866 [info ] [MainThread]: Required dependencies:
 [0m08:57:23.061866 [debug] [MainThread]: Executing "git --help"
 [0m08:57:23.096870 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -171,15 +171,15 @@ Runtime Error
 
 [0m08:57:23.098874 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:57:23.098874 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:57:23.099872 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:57:23.099872 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:57:23.100895 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:57:23.101871 [debug] [MainThread]: Command `dbt debug` failed at 08:57:23.101871 after 0.20 seconds
 [0m08:57:23.102887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237B8EBBF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237B8EA1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237B6F40B0>]}
@@ -194,13 +194,13 @@ Runtime Error
 [0m08:57:39.370444 [info ] [MainThread]: python version: 3.12.10
 [0m08:57:39.370444 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:57:39.371441 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:57:39.372441 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:57:39.372441 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:57:39.373486 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:57:39.373486 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:57:39.374494 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:57:39.374494 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:57:39.374494 [info ] [MainThread]: Configuration:
 [0m08:57:39.375491 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:57:39.375491 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:57:39.375491 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:57:39.376492 [info ] [MainThread]: Required dependencies:
 [0m08:57:39.376492 [debug] [MainThread]: Executing "git --help"
 [0m08:57:39.408492 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -209,15 +209,15 @@ Runtime Error
 
 [0m08:57:39.410492 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:57:39.410492 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:57:39.411493 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:57:39.411493 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:57:39.411493 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:57:39.412494 [debug] [MainThread]: Command `dbt debug` failed at 08:57:39.412494 after 0.20 seconds
 [0m08:57:39.412494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087878FA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087E343BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087C10B230>]}
@@ -232,13 +232,13 @@ Runtime Error
 [0m08:57:52.392320 [info ] [MainThread]: python version: 3.12.10
 [0m08:57:52.393324 [info ] [MainThread]: python path: C:\Users\Dyegho\AppData\Local\Programs\Python\Python312\python.exe
 [0m08:57:52.394324 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
-[0m08:57:52.396322 [info ] [MainThread]: target not specified in profile 'dbt_project', using 'default'
+[0m08:57:52.396322 [info ] [MainThread]: target not specified in profile 'airbnb_analytics', using 'default'
 [0m08:57:52.397324 [info ] [MainThread]: Using profiles dir at C:\Users\Dyegho\.dbt
 [0m08:57:52.398324 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dyegho\.dbt\profiles.yml
-[0m08:57:52.399350 [info ] [MainThread]: Using dbt_project.yml file at D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml
+[0m08:57:52.399350 [info ] [MainThread]: Using airbnb_analytics.yml file at D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml
 [0m08:57:52.400324 [info ] [MainThread]: Configuration:
 [0m08:57:52.400324 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
-[0m08:57:52.401319 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:57:52.401319 [info ] [MainThread]:   airbnb_analytics.yml file [[31mERROR not found[0m]
 [0m08:57:52.401319 [info ] [MainThread]: Required dependencies:
 [0m08:57:52.402321 [debug] [MainThread]: Executing "git --help"
 [0m08:57:52.440337 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
@@ -247,15 +247,15 @@ Runtime Error
 
 [0m08:57:52.442335 [info ] [MainThread]: Connection test skipped since no profile was found
 [0m08:57:52.443321 [info ] [MainThread]: [31m2 checks failed:[0m
-[0m08:57:52.443321 [info ] [MainThread]: Could not load dbt_project.yml
+[0m08:57:52.443321 [info ] [MainThread]: Could not load airbnb_analytics.yml
 Profile loading failed for the following reason:
 Runtime Error
-  The profile 'dbt_project' does not have a target named 'default'. The valid target names for this profile are:
+  The profile 'airbnb_analytics' does not have a target named 'default'. The valid target names for this profile are:
    - dev
 
 
 [0m08:57:52.444342 [info ] [MainThread]: Project loading failed for the following reason:
- project path <D:\material_aulas\airbnb-analytics-engineering\dbt_project.yml> not found
+ project path <D:\material_aulas\airbnb-analytics-engineering\airbnb_analytics.yml> not found
 
 [0m08:57:52.445322 [debug] [MainThread]: Command `dbt debug` failed at 08:57:52.445322 after 0.21 seconds
 [0m08:57:52.446343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1CA51DA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1C48AFA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1CA639640>]}
