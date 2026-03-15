@@ -12,9 +12,9 @@ on:
 
 env:
   DBT_PROFILES_DIR: .
-  DATABRICKS_HOST: ${{ DATABRICKS_HOST }}
-  DATABRICKS_HTTP_PATH: ${{ DATABRICKS_HTTP_PATH }}
-  DATABRICKS_TOKEN: ${{ DATABRICKS_TOKEN }}
+  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+  DATABRICKS_HTTP_PATH: ${{ secrets.DATABRICKS_HTTP_PATH }}
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
   # Garante compatibilidade com runners modernos (Node 24)
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
 
@@ -122,9 +122,9 @@ jobs:
                 type: databricks
                 catalog: workspace
                 schema: airbnb_dev
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 4
           EOF
       
@@ -186,17 +186,17 @@ jobs:
                 type: databricks
                 catalog: workspace
                 schema: airbnb_dev
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 4
               prod:
                 type: databricks
                 catalog: workspace
                 schema: airbnb
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 8
           EOF
       
@@ -240,17 +240,17 @@ jobs:
                 type: databricks
                 catalog: workspace
                 schema: airbnb_dev
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 4
               prod:
                 type: databricks
                 catalog: workspace
                 schema: airbnb
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 8
           EOF
       
@@ -299,9 +299,9 @@ jobs:
                 type: databricks
                 catalog: workspace
                 schema: airbnb
-                host: ${{ DATABRICKS_HOST }}
-                http_path: ${{ DATABRICKS_HTTP_PATH }}
-                token: ${{ DATABRICKS_TOKEN }}
+                host: ${{ secrets.DATABRICKS_HOST }}
+                http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+                token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 8
           EOF
       
@@ -318,6 +318,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # Atualizado para v4
         with:
-          github_token: ${{ GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./airbnb_analytics/target
           publish_branch: gh-pages
