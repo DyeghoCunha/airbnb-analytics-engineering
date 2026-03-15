@@ -316,7 +316,7 @@ jobs:
           dbt docs generate --target prod
       
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4 # Atualizado para 4
+        uses: peaceiris/actions-gh-pages@v4 # Atualizado para 
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./airbnb_analytics/target
