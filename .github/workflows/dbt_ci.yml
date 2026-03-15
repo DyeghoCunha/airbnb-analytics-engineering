@@ -65,19 +65,19 @@ jobs:
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml <<EOF
           databricks:
-            target: ci
+            target: dev
             outputs:
-              ci:
+              dev:
                 type: databricks
                 catalog: workspace
-                schema: airbnb_ci
+                schema: airbnb_dev
                 host: ${{ secrets.DATABRICKS_HOST }}
                 http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
                 token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 4
           EOF
       
-      - name: Install dbt dependencies
+      - name: Install dbt dependendecies
         run: |
           cd airbnb_analytics
           dbt deps
@@ -85,7 +85,7 @@ jobs:
       - name: Compile dbt models
         run: |
           cd airbnb_analytics
-          dbt compile --target ci
+          dbt compile --target dev
       
       - name: Upload compiled files
         uses: actions/upload-artifact@v4
@@ -116,12 +116,12 @@ jobs:
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml <<EOF
           databricks:
-            target: ci
+            target: dev
             outputs:
-              ci:
+              dev:
                 type: databricks
                 catalog: workspace
-                schema: airbnb_ci
+                schema: airbnb_dev
                 host: ${{ secrets.DATABRICKS_HOST }}
                 http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
                 token: ${{ secrets.DATABRICKS_TOKEN }}
@@ -136,18 +136,18 @@ jobs:
       - name: Run dbt tests on sources
         run: |
           cd airbnb_analytics
-          dbt test --select source:* --target ci
+          dbt test --select source:* --target dev
       
       - name: Run dbt tests on silver layer
         run: |
           cd airbnb_analytics
-          dbt test --select silver --target ci
+          dbt test --select silver --target dev
       
       - name: Generate test results report
         if: always()
         run: |
           cd airbnb_analytics
-          dbt docs generate --target ci
+          dbt docs generate --target dev
       
       - name: Upload test results
         if: always()
