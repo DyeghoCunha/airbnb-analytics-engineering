@@ -58,12 +58,12 @@ CASE
   WHEN LENGTH(TRIM(comments)) BETWEEN 151 AND 300 THEN 'Medium'
   WHEN LENGTH(TRIM(comments)) > 300 THEN 'Long'
   ELSE 'Unknown'
-END AS review_length_category
+END AS review_length_category,
 
 CURRENT_TIMESTAMP() AS dbt_loaded_at,
 'stg_reviews' AS dbt_source_model
 
-FROM deduplicated WHERE row_num = 1 AND listing_id IS NOT NULL
+FROM deduplicated WHERE rn = 1 AND listing_id IS NOT NULL
 AND date IS NOT NULL
 AND comments IS NOT NULL
 AND TRIM(comments) != ''

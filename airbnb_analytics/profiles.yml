@@ -4,10 +4,10 @@ airbnb_analytics:
     dev:
       type: databricks
       catalog: workspace
-      schema: airbnb  # Schema base, dbt vai criar bronze/silver/gold
-      host: dbc-bf88daea-a04e.cloud.databricks.com  # Ex: adb-1234567890123456.7.azuredatabricks.net
-      http_path: /sql/1.0/warehouses/8b8af9d912dae651>
-      token: dapieb7e816da139d8e46d10e6b84d11bfd7
+      schema: airbnb  
+      host: dbc-bf88daea-a04e.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/8b8af9d912dae651
+      token: dapi752551efb8e89c8911e55821d35e3a78
       threads: 4
       
     prod:
@@ -16,5 +16,5 @@ airbnb_analytics:
       schema: airbnb
       host: dbc-bf88daea-a04e.cloud.databricks.com
       http_path: /sql/1.0/warehouses/8b8af9d912dae651
-      token: dapieb7e816da139d8e46d10e6b84d11bfd7
+      token: dapi752551efb8e89c8911e55821d35e3a78
       threads: 8

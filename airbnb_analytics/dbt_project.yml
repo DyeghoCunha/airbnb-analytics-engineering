@@ -1,4 +1,3 @@
-
 name: 'airbnb_analytics'
 version: '1.0.0'
 
@@ -34,21 +33,21 @@ models:
       +tags: ["gold", "production"]
 
 
-      fact_bookings:
-        +materialized: incremental
-        +partition_by: {
-          "field": "booking_date",
-          "data_type": "date",
-          "granularity": "month"
-        }
+      # fact_bookings:
+      #   +materialized: incremental
+      #   +partition_by: {
+      #     "field": "booking_date",
+      #     "data_type": "date",
+      #     "granularity": "month"
+      #   }
 
-      fact_reviews:
-        +materialized: incremental
-        +partition_by: {
-          "field": "review_date",
-          "data_type": "date",
-          "granularity": "month"
-        }
+      # fact_reviews:
+      #   +materialized: incremental
+      #   +partition_by: {
+      #     "field": "review_date",
+      #     "data_type": "date",
+      #     "granularity": "month"
+      #   }
 
 vars:
   start_date: '2020-01-01'

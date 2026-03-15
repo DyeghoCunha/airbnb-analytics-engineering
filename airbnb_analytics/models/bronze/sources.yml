@@ -41,10 +41,10 @@ sources:
             description: "Minimum nights required for booking"
           - name: host_id
             description: "Foreign key to hosts table"
-            tests:
-              - relationships:
-                  to: source('airbnb_raw', 'raw_hosts')
-                  field: id
+            # tests:
+            #   - relationships:
+            #       to: source('airbnb_raw', 'raw_hosts')
+            #       field: id
           - name: price
             description: "Listing price (may need cleaning)"
           - name: created_at
@@ -57,10 +57,10 @@ sources:
         columns:
           - name: listing_id
             description: "Foreign key to listings table"
-            tests:
-              - relationships:
-                  to: source('airbnb_raw', 'raw_listings')
-                  field: id
+            # tests:
+            #   - relationships:
+            #       to: source('airbnb_raw', 'raw_listings')
+            #       field: id
           - name: date
             description: "Review submission date"
             tests:

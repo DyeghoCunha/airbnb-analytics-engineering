@@ -1,0 +1,147 @@
+
+version: 2
+models:
+  - name: dim_host
+    description: "Host dimension with aggregated metrics from listings and reviews"
+    columns:
+      - name: host_key
+        description: "Surrogate key for host dimension"
+        tests:
+          - unique
+          - not_null
+      - name: host_id
+        description: "Natural key - original host ID"
+        tests:
+          - unique
+          - not_null
+      - name: total_listings
+        description: "Total number of listings owned by host"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: positive_review_rate
+        description: "Percentage of positive reviews (0-100)"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "BETWEEN 0 AND 100"
+
+  - name: dim_listing
+    description: "Listing dimension with enriched attributes and review metrics"
+    columns:
+      - name: listing_key
+        description: "Surrogate key for listing dimension"
+        tests:
+          - unique
+          - not_null
+      - name: listing_id
+        description: "Natural key - original listing ID"
+        tests:
+          - unique
+          - not_null
+      - name: host_id
+        description: "Foreign key to host dimension"
+        tests:
+          - not_null
+          # - relationships:
+          #     to: ref('dim_host')
+          #     field: host_id
+      - name: listing_quality_score
+        description: "Composite quality score (0-100)"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "BETWEEN 0 AND 100"
+
+  - name: dim_date
+    description: "Date dimension with calendar attributes and fiscal periods"
+    columns:
+      - name: date_key
+        description: "Surrogate key for date dimension"
+        tests:
+          - unique
+          - not_null
+      - name: date
+        description: "Natural key - calendar date"
+        tests:
+          - unique
+          - not_null
+      - name: is_weekend
+        description: "Flag indicating weekend (Saturday/Sunday)"
+        tests:
+          - accepted_values:
+              values: [true, false]
+              quote: false
+
+  - name: dim_location
+    description: "Location dimension with area classifications"
+    columns:
+      - name: location_key
+        description: "Surrogate key for location dimension"
+        tests:
+          - unique
+          - not_null
+      - name: listing_id
+        description: "Foreign key to listing"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_reviews
+    description: "Fact table containing all review transactions with sentiment analysis"
+    columns:
+      - name: review_key
+        description: "Surrogate key (composite: listing + date + reviewer)"
+        tests:
+          - unique
+          - not_null
+      - name: listing_key
+        description: "Foreign key to listing dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_listing')
+              field: listing_key
+      - name: host_key
+        description: "Foreign key to host dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_host')
+              field: host_key
+      - name: date_key
+        description: "Foreign key to date dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+      - name: review_count
+        description: "Always 1 (for SUM aggregations)"
+        tests:
+          - accepted_values:
+              values: [1]
+
+  - name: fact_listings_daily_snapshot
+    description: "Daily snapshot of listing states for trend analysis"
+    columns:
+      - name: snapshot_key
+        description: "Surrogate key (listing + snapshot date)"
+        tests:
+          - unique
+          - not_null
+      - name: listing_key
+        description: "Foreign key to listing dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_listing')
+              field: listing_key
+      - name: snapshot_date
+        description: "Date of the snapshot"
+        tests:
+          - not_null
+
+# Testes de integridade referencial entre fact e dimensions
+tests:
+  - name: test_fact_reviews_completeness
+    description: "All reviews should have valid dimension references"
+    # Custom test aqui se necessário

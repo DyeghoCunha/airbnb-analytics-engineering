@@ -5,7 +5,7 @@
 
 WITH source AS (
   SELECT * FROM {{ source('airbnb_raw', 'raw_hosts')}}
-)
+),
 
 deduplicated AS (
   SELECT *,

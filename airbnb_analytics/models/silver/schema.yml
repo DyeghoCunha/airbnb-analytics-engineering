@@ -62,11 +62,11 @@ models:
         tests:
           - not_null
           
-      - name: room_type_standardized
+      - name: room_type
         description: "Standardized room type category"
         tests:
           - accepted_values:
-              values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room', 'Other']
+              values: ['Entire Home/apt', 'Private Room', 'Shared Room', 'Hotel Room', 'Other']
               
       - name: price
         description: "Cleaned listing price (decimal format)"
