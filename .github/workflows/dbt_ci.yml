@@ -15,6 +15,8 @@ env:
   DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
   DATABRICKS_HTTP_PATH: ${{ secrets.DATABRICKS_HTTP_PATH }}
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+  # Garante compatibilidade com runners modernos (Node 24)
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
 
 jobs:
   dbt-lint:
@@ -23,10 +25,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -38,7 +40,7 @@ jobs:
         run: |
           cd dbt_project
           sqlfluff lint models/ --dialect databricks --exclude-rules L034,L036
-        continue-on-error: true  # Não falha o pipeline, apenas avisa
+        continue-on-error: true # Não trava o pipeline se houver erros de estilo
 
   dbt-compile:
     name: 🔨 Compile dbt Models
@@ -47,10 +49,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -86,7 +88,7 @@ jobs:
           dbt compile --target ci
       
       - name: Upload compiled files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: compiled-models
           path: dbt_project/target/compiled/
@@ -98,10 +100,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -149,7 +151,7 @@ jobs:
       
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dbt-test-results
           path: dbt_project/target/run_results.json
@@ -162,10 +164,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -216,10 +218,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -275,10 +277,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       
@@ -314,7 +316,7 @@ jobs:
           dbt docs generate --target prod
       
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4 # Atualizado para v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dbt_project/target
