@@ -1,0 +1,54 @@
+name: 'airbnb_analytics'
+version: '1.0.0'
+
+profile: 'airbnb_analytics'
+
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  airbnb_analytics:
+    bronze:
+      +materialized: view
+      +schema: bronze
+
+    silver:
+      +materialized: table
+      +schema: silver
+      +tags: ["silver"]
+
+    gold:
+      +materialized: table
+      +schema: gold 
+      +tags: ["gold", "production"]
+
+
+      # fact_bookings:
+      #   +materialized: incremental
+      #   +partition_by: {
+      #     "field": "booking_date",
+      #     "data_type": "date",
+      #     "granularity": "month"
+      #   }
+
+      # fact_reviews:
+      #   +materialized: incremental
+      #   +partition_by: {
+      #     "field": "review_date",
+      #     "data_type": "date",
+      #     "granularity": "month"
+      #   }
+
+vars:
+  start_date: '2020-01-01'
+  end_date: '2024-12-31'

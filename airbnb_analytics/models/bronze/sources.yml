@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: airbnb_raw
+    description: "Raw Airbnb data ingested from external sources"
+    database: workspace
+    schema: airbnb
+    tables:
+      - name: raw_hosts
+        description: "Raw host information from Airbnb platform"
+        columns:
+          - name: id
+            description: "Unique identifier for host"
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Host name"
+          - name: is_superhost
+            description: "Superhost status flag"
+          - name: created_at
+            description: "Host account creation timestamp"
+          - name: updated_at
+            description: "Last update timestamp"
+            
+      - name: raw_listings
+        description: "Raw listing information from Airbnb platform"
+        columns:
+          - name: id
+            description: "Unique identifier for listing"
+            tests:
+              - unique
+              - not_null
+          - name: listing_url
+            description: "URL to the listing page"
+          - name: name
+            description: "Listing title/name"
+          - name: room_type
+            description: "Type of room (entire home, private room, shared room)"
+          - name: minimum_nights
+            description: "Minimum nights required for booking"
+          - name: host_id
+            description: "Foreign key to hosts table"
+            # tests:
+            #   - relationships:
+            #       to: source('airbnb_raw', 'raw_hosts')
+            #       field: id
+          - name: price
+            description: "Listing price (may need cleaning)"
+          - name: created_at
+            description: "Listing creation timestamp"
+          - name: updated_at
+            description: "Last update timestamp"
+            
+      - name: raw_reviews
+        description: "Raw review data from Airbnb guests"
+        columns:
+          - name: listing_id
+            description: "Foreign key to listings table"
+            # tests:
+            #   - relationships:
+            #       to: source('airbnb_raw', 'raw_listings')
+            #       field: id
+          - name: date
+            description: "Review submission date"
+            tests:
+              - not_null
+          - name: reviewer_name
+            description: "Name of the reviewer"
+          - name: comments
+            description: "Review text/comments"
+          - name: sentiment
+            description: "Sentiment analysis result (if available)"
