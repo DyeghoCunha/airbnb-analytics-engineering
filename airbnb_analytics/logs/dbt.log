@@ -1008,3 +1008,1264 @@ Update your versions in packages.yml, then run dbt deps
 [0m16:39:33.530985 [debug] [MainThread]: Command `cli deps` succeeded at 16:39:33.529982 after 5.23 seconds
 [0m16:39:33.530985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E398A5D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E394E54F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E39BD0F80>]}
 [0m16:39:33.530985 [debug] [MainThread]: Flushing usage events
+[0m20:24:36.632652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC18D126F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC152612B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC15007560>]}
+
+
+============================== 20:24:36.637654 | 10e19eac-f1f0-4978-b0a4-95fd250f75c4 ==============================
+[0m20:24:36.637654 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:24:36.638652 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --select fact_reviews', 'send_anonymous_usage_stats': 'True'}
+[0m20:24:36.776847 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:24:36.778329 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:24:36.778329 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:24:37.993966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC183DAC00>]}
+[0m20:24:38.048489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3A221F70>]}
+[0m20:24:38.049489 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m20:24:38.318098 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:24:38.411271 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:24:38.411271 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m20:24:38.412267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC184FAE70>]}
+[0m20:24:40.321444 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m20:24:40.322443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3BB5D790>]}
+[0m20:24:40.684363 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.airbnb_analytics.bronze
+[0m20:24:40.695367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3BFC4E90>]}
+[0m20:24:40.938889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3BF463F0>]}
+[0m20:24:40.939896 [info ] [MainThread]: Found 9 models, 70 data tests, 3 sources, 983 macros
+[0m20:24:40.940889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3C093710>]}
+[0m20:24:40.942884 [info ] [MainThread]: 
+[0m20:24:40.943883 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(33884, 38192), compute-name=) - Creating connection
+[0m20:24:40.944884 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:24:40.944884 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Acquired connection on thread (33884, 38192), using default compute resource
+[0m20:24:40.946883 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=None, name=list_workspace, idle-time=0s, acquire-count=0, language=None, thread-identifier=(33884, 34304), compute-name=) - Creating connection
+[0m20:24:40.947884 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m20:24:40.947884 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 34304), compute-name=) - Acquired connection on thread (33884, 34304), using default compute resource
+[0m20:24:40.947884 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 34304), compute-name=) - Checking idleness
+[0m20:24:40.948885 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=None, name=list_workspace, idle-time=0.0010008811950683594s, acquire-count=1, language=None, thread-identifier=(33884, 34304), compute-name=) - Retrieving connection
+[0m20:24:40.948885 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m20:24:40.948885 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m20:24:40.949885 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:24:41.749258 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=01f120c6-250b-18dc-a4dd-738865c74765, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 34304), compute-name=) - Connection created
+[0m20:24:41.750270 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-250b-18dc-a4dd-738865c74765, command-id=Unknown) - Created cursor
+[0m20:24:42.267269 [debug] [ThreadPool]: SQL status: OK in 1.320 seconds
+[0m20:24:42.271278 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-250b-18dc-a4dd-738865c74765, command-id=01f120c6-2528-18d9-8fa7-49f6eeb39b3d) - Closing cursor
+[0m20:24:42.272278 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867984, session-id=01f120c6-250b-18dc-a4dd-738865c74765, name=list_workspace, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(33884, 34304), compute-name=) - Released connection
+[0m20:24:42.279295 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0s, acquire-count=0, language=None, thread-identifier=(33884, 29604), compute-name=) - Creating connection
+[0m20:24:42.280280 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0s, acquire-count=0, language=None, thread-identifier=(33884, 37036), compute-name=) - Creating connection
+[0m20:24:42.281279 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_silver'
+[0m20:24:42.281279 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_gold'
+[0m20:24:42.282278 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Acquired connection on thread (33884, 29604), using default compute resource
+[0m20:24:42.282278 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Acquired connection on thread (33884, 37036), using default compute resource
+[0m20:24:42.290265 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.007000923156738281s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Checking idleness
+[0m20:24:42.293279 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.011000394821166992s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Retrieving connection
+[0m20:24:42.294265 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.011986494064331055s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Checking idleness
+[0m20:24:42.294265 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.011986494064331055s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Retrieving connection
+[0m20:24:42.295293 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.013014078140258789s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Checking idleness
+[0m20:24:42.296279 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.014000654220581055s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Retrieving connection
+[0m20:24:42.296279 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:24:42.296279 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_silver"
+[0m20:24:42.297279 [debug] [ThreadPool]: On list_workspace_airbnb_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_silver"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_silver'
+    
+  
+[0m20:24:42.297279 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:24:42.298278 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.015999794006347656s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Checking idleness
+[0m20:24:42.299278 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.015999794006347656s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Retrieving connection
+[0m20:24:42.315677 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:24:42.323675 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_gold"
+[0m20:24:42.325672 [debug] [ThreadPool]: On list_workspace_airbnb_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_gold"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_gold'
+    
+  
+[0m20:24:42.325672 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:24:43.030813 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=01f120c6-25cc-11bb-b1f6-71db216211d4, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 29604), compute-name=) - Connection created
+[0m20:24:43.031818 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-25cc-11bb-b1f6-71db216211d4, command-id=Unknown) - Created cursor
+[0m20:24:43.057824 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=01f120c6-25d0-1206-b7bb-15cfb579e0ad, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 37036), compute-name=) - Connection created
+[0m20:24:43.059832 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-25d0-1206-b7bb-15cfb579e0ad, command-id=Unknown) - Created cursor
+[0m20:24:44.201199 [debug] [ThreadPool]: SQL status: OK in 1.880 seconds
+[0m20:24:44.205181 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-25d0-1206-b7bb-15cfb579e0ad, command-id=01f120c6-25f1-10eb-91af-6d6a968536f5) - Closing cursor
+[0m20:24:44.206180 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251867648, session-id=01f120c6-25d0-1206-b7bb-15cfb579e0ad, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(33884, 37036), compute-name=) - Released connection
+[0m20:24:44.308526 [debug] [ThreadPool]: SQL status: OK in 2.010 seconds
+[0m20:24:44.312516 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-25cc-11bb-b1f6-71db216211d4, command-id=01f120c6-25ec-139a-80ae-da281b367896) - Closing cursor
+[0m20:24:44.313515 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1839251965040, session-id=01f120c6-25cc-11bb-b1f6-71db216211d4, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(33884, 29604), compute-name=) - Released connection
+[0m20:24:44.314525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC19322270>]}
+[0m20:24:44.315525 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=3.370640993118286s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Checking idleness
+[0m20:24:44.315525 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=3.370640993118286s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Retrieving connection
+[0m20:24:44.316526 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=3.3716421127319336s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Checking idleness
+[0m20:24:44.316526 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=3.3716421127319336s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Retrieving connection
+[0m20:24:44.317524 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:24:44.317524 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:24:44.317524 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(33884, 38192), compute-name=) - Released connection
+[0m20:24:44.318524 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:24:44.319525 [info ] [MainThread]: 
+[0m20:24:44.323522 [debug] [Thread-1 (]: Began running node model.airbnb_analytics.fact_reviews
+[0m20:24:44.324524 [info ] [Thread-1 (]: 1 of 1 START sql incremental model airbnb_gold.fact_reviews .................... [RUN]
+[0m20:24:44.325526 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0s, acquire-count=0, language=None, thread-identifier=(33884, 39276), compute-name=) - Creating connection
+[0m20:24:44.326524 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.airbnb_analytics.fact_reviews'
+[0m20:24:44.326524 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Acquired connection on thread (33884, 39276), using default compute resource for model '`workspace`.`airbnb_gold`.`fact_reviews`'
+[0m20:24:44.327527 [debug] [Thread-1 (]: Began compiling node model.airbnb_analytics.fact_reviews
+[0m20:24:44.345033 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb_analytics.fact_reviews"
+[0m20:24:44.347033 [debug] [Thread-1 (]: Began executing node model.airbnb_analytics.fact_reviews
+[0m20:24:44.388032 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.0615084171295166s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:44.389034 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.06251001358032227s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:44.389034 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.06251001358032227s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:44.390033 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.06350874900817871s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:44.390033 [debug] [Thread-1 (]: Spark adapter: NotImplemented: add_begin_query
+[0m20:24:44.390033 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:44.391032 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+SELECT tag_name, tag_value
+  FROM `system`.`information_schema`.`table_tags`
+  WHERE catalog_name = 'workspace' 
+    AND schema_name = 'airbnb_gold'
+    AND table_name = 'fact_reviews'
+  
+[0m20:24:44.391032 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:24:45.067636 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Connection created
+[0m20:24:45.067636 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:45.905648 [debug] [Thread-1 (]: SQL status: OK in 1.510 seconds
+[0m20:24:45.908665 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-2723-1155-b112-dbc2c4f14bda) - Closing cursor
+[0m20:24:45.924701 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=0.857062816619873s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:45.924701 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=0.8580644130706787s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:45.925685 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:45.926686 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+
+  
+    create or replace temporary view `fact_reviews__dbt_tmp` as
+      
+
+WITH stg_reviews AS (
+    SELECT * FROM `workspace`.`airbnb_silver`.`stg_reviews`
+    
+    WHERE review_date > (SELECT MAX(review_date) FROM `workspace`.`airbnb_gold`.`fact_reviews`)
+    
+),
+
+dim_listing AS (
+    SELECT 
+        listing_key,
+        listing_id,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_listing`
+),
+
+dim_host AS (
+    SELECT
+        host_key,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_host`
+),
+
+dim_date AS (
+    SELECT
+        date_key,
+        date
+    FROM `workspace`.`airbnb_gold`.`dim_date`
+),
+
+final AS (
+    SELECT
+        md5(cast(concat(coalesce(cast(r.listing_id as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.review_date as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.reviewer_name as string), '_dbt_utils_surrogate_key_null_')) as string)) AS review_key,
+        
+        dl.listing_key,
+        dh.host_key,
+        dd.date_key,
+        
+        r.listing_id,
+        r.review_date,
+        
+        r.reviewer_name,
+        
+        1 AS review_count,  -- Para COUNT em agregações
+        r.review_length,
+        r.word_count,
+        
+        -- Flags para agregações condicionais
+        CASE WHEN r.sentiment_category = 'Positive' THEN 1 ELSE 0 END AS is_positive,
+        CASE WHEN r.sentiment_category = 'Negative' THEN 1 ELSE 0 END AS is_negative,
+        CASE WHEN r.sentiment_category = 'Neutral' THEN 1 ELSE 0 END AS is_neutral,
+        
+        CASE WHEN r.mentions_clean THEN 1 ELSE 0 END AS mentions_clean_flag,
+        CASE WHEN r.mentions_location THEN 1 ELSE 0 END AS mentions_location_flag,
+        CASE WHEN r.mentions_host THEN 1 ELSE 0 END AS mentions_host_flag,
+        
+        -- Atributos não-aditivos (para contexto)
+        r.sentiment_category,
+        r.review_length_category,
+        r.review_comments,  -- Pode ser útil para drill-down
+        
+        -- Métricas calculadas
+        CASE 
+            WHEN r.word_count > 0 THEN ROUND(r.review_length * 1.0 / r.word_count, 2)
+            ELSE 0
+        END AS avg_word_length,
+        
+        -- Metadata
+        r.dbt_loaded_at,
+        CURRENT_TIMESTAMP() AS dbt_updated_at
+        
+    FROM stg_reviews r
+    INNER JOIN dim_listing dl ON r.listing_id = dl.listing_id
+    INNER JOIN dim_host dh ON dl.host_id = dh.host_id
+    LEFT JOIN dim_date dd ON CAST(r.review_date AS DATE) = dd.date
+)
+
+SELECT * FROM final
+  
+[0m20:24:45.926686 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:47.045837 [debug] [Thread-1 (]: SQL status: OK in 1.120 seconds
+[0m20:24:47.046841 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-27a6-15bd-8144-8ec5923ad946) - Closing cursor
+[0m20:24:47.072266 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=2.005629777908325s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:47.073268 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=2.006632089614868s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:47.074266 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:47.074266 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+describe table `workspace`.`airbnb_gold`.`fact_reviews`
+  
+[0m20:24:47.075267 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:47.601024 [debug] [Thread-1 (]: SQL status: OK in 0.530 seconds
+[0m20:24:47.606263 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-2854-1ff9-9b69-83f53adfc33b) - Closing cursor
+[0m20:24:47.610264 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=2.542628288269043s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:47.610264 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=2.5436277389526367s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:47.611266 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:47.611266 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+describe table `fact_reviews__dbt_tmp`
+  
+[0m20:24:47.612285 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:48.135767 [debug] [Thread-1 (]: SQL status: OK in 0.520 seconds
+[0m20:24:48.138777 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-28a7-10d6-a8bd-48f12801760f) - Closing cursor
+[0m20:24:48.152777 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb_analytics.fact_reviews"
+[0m20:24:48.154779 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=3.0881431102752686s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:48.154779 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=3.0881431102752686s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:48.155780 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:48.156776 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+-- back compat for old kwarg name
+  
+  
+  
+      
+          
+          
+      
+  
+
+  merge into `workspace`.`airbnb_gold`.`fact_reviews` as DBT_INTERNAL_DEST
+      using `fact_reviews__dbt_tmp` as DBT_INTERNAL_SOURCE
+      on 
+              DBT_INTERNAL_SOURCE.review_key <=> DBT_INTERNAL_DEST.review_key
+          
+      when matched then update set *
+      when not matched then insert *
+
+[0m20:24:48.156776 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:54.817188 [debug] [Thread-1 (]: SQL status: OK in 6.660 seconds
+[0m20:24:54.818188 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-28fc-1050-9aba-7e2500b43364) - Closing cursor
+[0m20:24:55.043737 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=9.977100372314453s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Checking idleness
+[0m20:24:55.044726 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=9.977100372314453s, acquire-count=1, language=sql, thread-identifier=(33884, 39276), compute-name=) - Retrieving connection
+[0m20:24:55.044726 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:24:55.044726 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+ALTER table `workspace`.`airbnb_gold`.`fact_reviews` CLUSTER BY NONE
+[0m20:24:55.045736 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=Unknown) - Created cursor
+[0m20:24:55.642620 [debug] [Thread-1 (]: SQL status: OK in 0.600 seconds
+[0m20:24:55.643620 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, command-id=01f120c6-2d15-16fa-8226-e70c09333aad) - Closing cursor
+[0m20:24:55.675132 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(33884, 39276), compute-name=) - Released connection
+[0m20:24:55.676132 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1839248158752, session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(33884, 39276), compute-name=) - Released connection
+[0m20:24:55.677132 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10e19eac-f1f0-4978-b0a4-95fd250f75c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3BB9B6B0>]}
+[0m20:24:55.678132 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model airbnb_gold.fact_reviews ............... [[32mOK[0m in 11.35s]
+[0m20:24:55.679129 [debug] [Thread-1 (]: Finished running node model.airbnb_analytics.fact_reviews
+[0m20:24:55.680129 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=11.362605094909668s, acquire-count=0, language=None, thread-identifier=(33884, 38192), compute-name=) - Checking idleness
+[0m20:24:55.681132 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=11.36360764503479s, acquire-count=0, language=None, thread-identifier=(33884, 38192), compute-name=) - Reusing connection previously named master
+[0m20:24:55.681132 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=11.36360764503479s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Acquired connection on thread (33884, 38192), using default compute resource
+[0m20:24:55.681132 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=11.36360764503479s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Checking idleness
+[0m20:24:55.682131 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=None, name=master, idle-time=11.364606618881226s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Retrieving connection
+[0m20:24:55.682131 [debug] [MainThread]: On master: ROLLBACK
+[0m20:24:55.682131 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:24:56.400110 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=01f120c6-2dc6-1a51-b85f-e89f8a9b4523, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Connection created
+[0m20:24:56.401133 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:24:56.402119 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=01f120c6-2dc6-1a51-b85f-e89f8a9b4523, name=master, idle-time=0.0010228157043457031s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Checking idleness
+[0m20:24:56.402119 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=01f120c6-2dc6-1a51-b85f-e89f8a9b4523, name=master, idle-time=0.0020084381103515625s, acquire-count=1, language=None, thread-identifier=(33884, 38192), compute-name=) - Retrieving connection
+[0m20:24:56.403120 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:24:56.403120 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:24:56.404118 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1839253233664, session-id=01f120c6-2dc6-1a51-b85f-e89f8a9b4523, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(33884, 38192), compute-name=) - Released connection
+[0m20:24:56.404118 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:24:56.405122 [debug] [MainThread]: On master: ROLLBACK
+[0m20:24:56.405122 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:24:56.406152 [debug] [MainThread]: On master: Close
+[0m20:24:56.406152 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-2dc6-1a51-b85f-e89f8a9b4523) - Closing connection
+[0m20:24:56.611724 [debug] [MainThread]: Connection 'list_workspace' was properly closed.
+[0m20:24:56.612739 [debug] [MainThread]: On list_workspace: Close
+[0m20:24:56.613726 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-250b-18dc-a4dd-738865c74765) - Closing connection
+[0m20:24:56.814789 [debug] [MainThread]: Connection 'list_workspace_airbnb_silver' was properly closed.
+[0m20:24:56.815788 [debug] [MainThread]: On list_workspace_airbnb_silver: ROLLBACK
+[0m20:24:56.815788 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:24:56.816787 [debug] [MainThread]: On list_workspace_airbnb_silver: Close
+[0m20:24:56.817787 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-25cc-11bb-b1f6-71db216211d4) - Closing connection
+[0m20:24:57.016538 [debug] [MainThread]: Connection 'list_workspace_airbnb_gold' was properly closed.
+[0m20:24:57.016538 [debug] [MainThread]: On list_workspace_airbnb_gold: ROLLBACK
+[0m20:24:57.017561 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:24:57.017561 [debug] [MainThread]: On list_workspace_airbnb_gold: Close
+[0m20:24:57.018550 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-25d0-1206-b7bb-15cfb579e0ad) - Closing connection
+[0m20:24:57.234439 [debug] [MainThread]: Connection 'model.airbnb_analytics.fact_reviews' was properly closed.
+[0m20:24:57.234439 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: ROLLBACK
+[0m20:24:57.235437 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:24:57.235437 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: Close
+[0m20:24:57.236464 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-2707-1e7a-88cc-3d8a011d6448) - Closing connection
+[0m20:24:57.435538 [info ] [MainThread]: 
+[0m20:24:57.437014 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 16.49 seconds (16.49s).
+[0m20:24:57.438412 [debug] [MainThread]: Command end result
+[0m20:24:57.493276 [info ] [MainThread]: 
+[0m20:24:57.494289 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:24:57.495290 [info ] [MainThread]: 
+[0m20:24:57.495290 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:24:57.497291 [debug] [MainThread]: Command `dbt run` succeeded at 20:24:57.497291 after 21.00 seconds
+[0m20:24:57.497291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC18BED9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3C0C2B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC3BFDDCA0>]}
+[0m20:24:57.498289 [debug] [MainThread]: Flushing usage events
+[0m20:26:22.026716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD61757F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD8990440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD89918B0>]}
+
+
+============================== 20:26:22.031717 | 4a2074b1-1f03-48e0-9aff-156e68e92776 ==============================
+[0m20:26:22.031717 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:26:22.032725 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select fact_reviews', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:26:22.173767 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:26:22.173767 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:26:22.174768 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:26:23.417325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD92FF4A0>]}
+[0m20:26:23.483151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFBAA4920>]}
+[0m20:26:23.484167 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m20:26:23.767158 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:26:23.967252 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:26:23.968255 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:26:23.975252 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.airbnb_analytics.bronze
+[0m20:26:24.012254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFC30E090>]}
+[0m20:26:24.205609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFBF4F260>]}
+[0m20:26:24.205609 [info ] [MainThread]: Found 9 models, 70 data tests, 3 sources, 983 macros
+[0m20:26:24.206619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFC322480>]}
+[0m20:26:24.208621 [info ] [MainThread]: 
+[0m20:26:24.209590 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37044, 37012), compute-name=) - Creating connection
+[0m20:26:24.209590 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:26:24.210588 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Acquired connection on thread (37044, 37012), using default compute resource
+[0m20:26:24.211591 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=None, name=list_workspace, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37044, 20332), compute-name=) - Creating connection
+[0m20:26:24.211591 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m20:26:24.212591 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 20332), compute-name=) - Acquired connection on thread (37044, 20332), using default compute resource
+[0m20:26:24.212591 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 20332), compute-name=) - Checking idleness
+[0m20:26:24.212591 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 20332), compute-name=) - Retrieving connection
+[0m20:26:24.212591 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m20:26:24.213603 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m20:26:24.213603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:26:25.360365 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=01f120c6-628b-1ec5-a722-fbdbfaf952e7, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 20332), compute-name=) - Connection created
+[0m20:26:25.361348 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-628b-1ec5-a722-fbdbfaf952e7, command-id=Unknown) - Created cursor
+[0m20:26:25.632619 [debug] [ThreadPool]: SQL status: OK in 1.420 seconds
+[0m20:26:25.637631 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-628b-1ec5-a722-fbdbfaf952e7, command-id=01f120c6-62ea-1dab-9968-ea5825126340) - Closing cursor
+[0m20:26:25.638633 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638543920, session-id=01f120c6-628b-1ec5-a722-fbdbfaf952e7, name=list_workspace, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37044, 20332), compute-name=) - Released connection
+[0m20:26:25.647633 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37044, 14620), compute-name=) - Creating connection
+[0m20:26:25.647633 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_silver'
+[0m20:26:25.648633 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Acquired connection on thread (37044, 14620), using default compute resource
+[0m20:26:25.655755 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37044, 37632), compute-name=) - Creating connection
+[0m20:26:25.664766 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.015117406845092773s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Checking idleness
+[0m20:26:25.665755 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.01712179183959961s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Retrieving connection
+[0m20:26:25.665755 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_gold'
+[0m20:26:25.666753 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.01811981201171875s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Checking idleness
+[0m20:26:25.667755 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Acquired connection on thread (37044, 37632), using default compute resource
+[0m20:26:25.667755 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.019121170043945312s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Retrieving connection
+[0m20:26:25.672753 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.004998207092285156s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Checking idleness
+[0m20:26:25.673752 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:26:25.673752 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.005997419357299805s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Retrieving connection
+[0m20:26:25.674754 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_silver"
+[0m20:26:25.675752 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.007997274398803711s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Checking idleness
+[0m20:26:25.675752 [debug] [ThreadPool]: On list_workspace_airbnb_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_silver"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_silver'
+    
+  
+[0m20:26:25.676775 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.009020328521728516s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Retrieving connection
+[0m20:26:25.676775 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:26:25.677772 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:26:25.678323 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_gold"
+[0m20:26:25.678323 [debug] [ThreadPool]: On list_workspace_airbnb_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_gold"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_gold'
+    
+  
+[0m20:26:25.689116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:26:26.397201 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=01f120c6-636b-1bb7-8308-98872bb2e4f4, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 14620), compute-name=) - Connection created
+[0m20:26:26.398190 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-636b-1bb7-8308-98872bb2e4f4, command-id=Unknown) - Created cursor
+[0m20:26:26.405178 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=01f120c6-636e-1a9b-a48d-bafe78a3ab40, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 37632), compute-name=) - Connection created
+[0m20:26:26.405178 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-636e-1a9b-a48d-bafe78a3ab40, command-id=Unknown) - Created cursor
+[0m20:26:27.165339 [debug] [ThreadPool]: SQL status: OK in 1.480 seconds
+[0m20:26:27.170190 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-636e-1a9b-a48d-bafe78a3ab40, command-id=01f120c6-638a-1966-8785-be649711d4a7) - Closing cursor
+[0m20:26:27.171180 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786055104688, session-id=01f120c6-636e-1a9b-a48d-bafe78a3ab40, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37044, 37632), compute-name=) - Released connection
+[0m20:26:27.249874 [debug] [ThreadPool]: SQL status: OK in 1.570 seconds
+[0m20:26:27.252906 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-636b-1bb7-8308-98872bb2e4f4, command-id=01f120c6-6389-18ad-aa0e-3e670da462ab) - Closing cursor
+[0m20:26:27.253889 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1786638565056, session-id=01f120c6-636b-1bb7-8308-98872bb2e4f4, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37044, 14620), compute-name=) - Released connection
+[0m20:26:27.256183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFC31B020>]}
+[0m20:26:27.256183 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=3.045595169067383s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Checking idleness
+[0m20:26:27.257188 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=3.0465993881225586s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Retrieving connection
+[0m20:26:27.257188 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=3.0465993881225586s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Checking idleness
+[0m20:26:27.258218 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=3.0476293563842773s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Retrieving connection
+[0m20:26:27.258218 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:26:27.258218 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:26:27.259185 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37044, 37012), compute-name=) - Released connection
+[0m20:26:27.259185 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:26:27.261187 [info ] [MainThread]: 
+[0m20:26:27.266184 [debug] [Thread-1 (]: Began running node model.airbnb_analytics.fact_reviews
+[0m20:26:27.266184 [info ] [Thread-1 (]: 1 of 1 START sql incremental model airbnb_gold.fact_reviews .................... [RUN]
+[0m20:26:27.268187 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37044, 39852), compute-name=) - Creating connection
+[0m20:26:27.268187 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.airbnb_analytics.fact_reviews'
+[0m20:26:27.269183 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Acquired connection on thread (37044, 39852), using default compute resource for model '`workspace`.`airbnb_gold`.`fact_reviews`'
+[0m20:26:27.269183 [debug] [Thread-1 (]: Began compiling node model.airbnb_analytics.fact_reviews
+[0m20:26:27.303181 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb_analytics.fact_reviews"
+[0m20:26:27.304183 [debug] [Thread-1 (]: Began executing node model.airbnb_analytics.fact_reviews
+[0m20:26:27.378962 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb_analytics.fact_reviews"
+[0m20:26:27.379978 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.1107950210571289s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Checking idleness
+[0m20:26:27.380963 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11178016662597656s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Retrieving connection
+[0m20:26:27.380963 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11178016662597656s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Checking idleness
+[0m20:26:27.380963 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11178016662597656s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Retrieving connection
+[0m20:26:27.381976 [debug] [Thread-1 (]: Spark adapter: NotImplemented: add_begin_query
+[0m20:26:27.381976 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:26:27.382977 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+
+  
+    
+        create or replace table `workspace`.`airbnb_gold`.`fact_reviews`
+      
+      using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      
+
+WITH stg_reviews AS (
+    SELECT * FROM `workspace`.`airbnb_silver`.`stg_reviews`
+    
+),
+
+dim_listing AS (
+    SELECT 
+        listing_key,
+        listing_id,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_listing`
+),
+
+dim_host AS (
+    SELECT
+        host_key,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_host`
+),
+
+dim_date AS (
+    SELECT
+        date_key,
+        date
+    FROM `workspace`.`airbnb_gold`.`dim_date`
+),
+
+final AS (
+    SELECT
+        md5(cast(concat(coalesce(cast(r.listing_id as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.review_date as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.reviewer_name as string), '_dbt_utils_surrogate_key_null_')) as string)) AS review_key,
+        
+        dl.listing_key,
+        dh.host_key,
+        dd.date_key,
+        
+        r.listing_id,
+        r.review_date,
+        
+        r.reviewer_name,
+        
+        1 AS review_count,  -- Para COUNT em agregações
+        r.review_length,
+        r.word_count,
+        
+        -- Flags para agregações condicionais
+        CASE WHEN r.sentiment_category = 'Positive' THEN 1 ELSE 0 END AS is_positive,
+        CASE WHEN r.sentiment_category = 'Negative' THEN 1 ELSE 0 END AS is_negative,
+        CASE WHEN r.sentiment_category = 'Neutral' THEN 1 ELSE 0 END AS is_neutral,
+        
+        CASE WHEN r.mentions_clean THEN 1 ELSE 0 END AS mentions_clean_flag,
+        CASE WHEN r.mentions_location THEN 1 ELSE 0 END AS mentions_location_flag,
+        CASE WHEN r.mentions_host THEN 1 ELSE 0 END AS mentions_host_flag,
+        
+        -- Atributos não-aditivos (para contexto)
+        r.sentiment_category,
+        r.review_length_category,
+        r.review_comments,  -- Pode ser útil para drill-down
+        
+        -- Métricas calculadas
+        CASE 
+            WHEN r.word_count > 0 THEN ROUND(r.review_length * 1.0 / r.word_count, 2)
+            ELSE 0
+        END AS avg_word_length,
+        
+        -- Metadata
+        r.dbt_loaded_at,
+        CURRENT_TIMESTAMP() AS dbt_updated_at
+        
+    FROM stg_reviews r
+    INNER JOIN dim_listing dl ON r.listing_id = dl.listing_id
+    INNER JOIN dim_host dh ON dl.host_id = dh.host_id
+    LEFT JOIN dim_date dd ON CAST(r.review_date AS DATE) = dd.date
+)
+
+SELECT * FROM final
+  
+[0m20:26:27.382977 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:26:28.076612 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=01f120c6-646c-1069-bbc7-9db11bceaff1, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(37044, 39852), compute-name=) - Connection created
+[0m20:26:28.077597 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-646c-1069-bbc7-9db11bceaff1, command-id=Unknown) - Created cursor
+[0m20:26:36.791984 [debug] [Thread-1 (]: SQL status: OK in 9.410 seconds
+[0m20:26:36.793982 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-646c-1069-bbc7-9db11bceaff1, command-id=01f120c6-648a-1035-85ee-ce72664c4c69) - Closing cursor
+[0m20:26:37.054896 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=01f120c6-646c-1069-bbc7-9db11bceaff1, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(37044, 39852), compute-name=) - Released connection
+[0m20:26:37.055896 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1786641080608, session-id=01f120c6-646c-1069-bbc7-9db11bceaff1, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(37044, 39852), compute-name=) - Released connection
+[0m20:26:37.056895 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a2074b1-1f03-48e0-9aff-156e68e92776', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FFBA5F680>]}
+[0m20:26:37.057896 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model airbnb_gold.fact_reviews ............... [[32mOK[0m in 9.79s]
+[0m20:26:37.058896 [debug] [Thread-1 (]: Finished running node model.airbnb_analytics.fact_reviews
+[0m20:26:37.059896 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=9.800711393356323s, acquire-count=0, language=None, thread-identifier=(37044, 37012), compute-name=) - Checking idleness
+[0m20:26:37.059896 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=9.800711393356323s, acquire-count=0, language=None, thread-identifier=(37044, 37012), compute-name=) - Reusing connection previously named master
+[0m20:26:37.060893 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=9.801708459854126s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Acquired connection on thread (37044, 37012), using default compute resource
+[0m20:26:37.060893 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=9.801708459854126s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Checking idleness
+[0m20:26:37.060893 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=None, name=master, idle-time=9.801708459854126s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Retrieving connection
+[0m20:26:37.062015 [debug] [MainThread]: On master: ROLLBACK
+[0m20:26:37.062015 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:26:37.812229 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=01f120c6-6a3a-19a8-8305-4c882be59370, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Connection created
+[0m20:26:37.813229 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:26:37.813229 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=01f120c6-6a3a-19a8-8305-4c882be59370, name=master, idle-time=0.00099945068359375s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Checking idleness
+[0m20:26:37.814228 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=01f120c6-6a3a-19a8-8305-4c882be59370, name=master, idle-time=0.00099945068359375s, acquire-count=1, language=None, thread-identifier=(37044, 37012), compute-name=) - Retrieving connection
+[0m20:26:37.814228 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:26:37.814228 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:26:37.815226 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1786638560304, session-id=01f120c6-6a3a-19a8-8305-4c882be59370, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37044, 37012), compute-name=) - Released connection
+[0m20:26:37.815226 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:26:37.816229 [debug] [MainThread]: On master: ROLLBACK
+[0m20:26:37.816229 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:26:37.817228 [debug] [MainThread]: On master: Close
+[0m20:26:37.817228 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-6a3a-19a8-8305-4c882be59370) - Closing connection
+[0m20:26:38.027504 [debug] [MainThread]: Connection 'list_workspace' was properly closed.
+[0m20:26:38.027504 [debug] [MainThread]: On list_workspace: Close
+[0m20:26:38.027504 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-628b-1ec5-a722-fbdbfaf952e7) - Closing connection
+[0m20:26:38.222874 [debug] [MainThread]: Connection 'list_workspace_airbnb_silver' was properly closed.
+[0m20:26:38.223893 [debug] [MainThread]: On list_workspace_airbnb_silver: ROLLBACK
+[0m20:26:38.223893 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:26:38.224879 [debug] [MainThread]: On list_workspace_airbnb_silver: Close
+[0m20:26:38.224879 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-636b-1bb7-8308-98872bb2e4f4) - Closing connection
+[0m20:26:38.429683 [debug] [MainThread]: Connection 'list_workspace_airbnb_gold' was properly closed.
+[0m20:26:38.430684 [debug] [MainThread]: On list_workspace_airbnb_gold: ROLLBACK
+[0m20:26:38.430684 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:26:38.431696 [debug] [MainThread]: On list_workspace_airbnb_gold: Close
+[0m20:26:38.431696 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-636e-1a9b-a48d-bafe78a3ab40) - Closing connection
+[0m20:26:38.636542 [debug] [MainThread]: Connection 'model.airbnb_analytics.fact_reviews' was properly closed.
+[0m20:26:38.636542 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: ROLLBACK
+[0m20:26:38.637544 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:26:38.637544 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: Close
+[0m20:26:38.637544 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-646c-1069-bbc7-9db11bceaff1) - Closing connection
+[0m20:26:38.848238 [info ] [MainThread]: 
+[0m20:26:38.849227 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 14.64 seconds (14.64s).
+[0m20:26:38.851224 [debug] [MainThread]: Command end result
+[0m20:26:38.915972 [info ] [MainThread]: 
+[0m20:26:38.915972 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:26:38.916971 [info ] [MainThread]: 
+[0m20:26:38.917969 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:26:38.918988 [debug] [MainThread]: Command `dbt run` succeeded at 20:26:38.917969 after 17.06 seconds
+[0m20:26:38.918988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD5735010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FF9E34A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FD8EA24E0>]}
+[0m20:26:38.918988 [debug] [MainThread]: Flushing usage events
+[0m20:30:22.678362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FBD8B1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FE128230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FE12A3F0>]}
+
+
+============================== 20:30:22.682359 | c0ad38a7-61ad-44b1-8087-df4690e8a9fd ==============================
+[0m20:30:22.682359 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:30:22.683359 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select dim_date', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:30:22.803790 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:30:22.803790 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:30:22.804790 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:30:24.100472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FE8C93A0>]}
+[0m20:30:24.156470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FC2D9A00>]}
+[0m20:30:24.157470 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m20:30:24.518816 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:30:24.797895 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:30:24.798895 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:30:24.809892 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.airbnb_analytics.bronze
+[0m20:30:24.869426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3A17EF320>]}
+[0m20:30:25.105988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3A16D87D0>]}
+[0m20:30:25.106995 [info ] [MainThread]: Found 9 models, 70 data tests, 3 sources, 983 macros
+[0m20:30:25.107988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3A1156750>]}
+[0m20:30:25.112990 [info ] [MainThread]: 
+[0m20:30:25.113986 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(21448, 30116), compute-name=) - Creating connection
+[0m20:30:25.114986 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:30:25.115986 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Acquired connection on thread (21448, 30116), using default compute resource
+[0m20:30:25.117988 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=None, name=list_workspace, idle-time=0s, acquire-count=0, language=None, thread-identifier=(21448, 32728), compute-name=) - Creating connection
+[0m20:30:25.118985 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m20:30:25.118985 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 32728), compute-name=) - Acquired connection on thread (21448, 32728), using default compute resource
+[0m20:30:25.119986 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=None, name=list_workspace, idle-time=0.0010013580322265625s, acquire-count=1, language=None, thread-identifier=(21448, 32728), compute-name=) - Checking idleness
+[0m20:30:25.119986 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=None, name=list_workspace, idle-time=0.0010013580322265625s, acquire-count=1, language=None, thread-identifier=(21448, 32728), compute-name=) - Retrieving connection
+[0m20:30:25.120986 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m20:30:25.120986 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m20:30:25.121993 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:30:26.801167 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=01f120c6-f2b8-1144-91aa-96af55609c52, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 32728), compute-name=) - Connection created
+[0m20:30:26.802200 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f2b8-1144-91aa-96af55609c52, command-id=Unknown) - Created cursor
+[0m20:30:27.090606 [debug] [ThreadPool]: SQL status: OK in 1.970 seconds
+[0m20:30:27.095174 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f2b8-1144-91aa-96af55609c52, command-id=01f120c6-f2d4-1d1a-acb2-00af7f9a75cd) - Closing cursor
+[0m20:30:27.096157 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871022443216, session-id=01f120c6-f2b8-1144-91aa-96af55609c52, name=list_workspace, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(21448, 32728), compute-name=) - Released connection
+[0m20:30:27.105161 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0s, acquire-count=0, language=None, thread-identifier=(21448, 28184), compute-name=) - Creating connection
+[0m20:30:27.106158 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_gold'
+[0m20:30:27.107163 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0s, acquire-count=0, language=None, thread-identifier=(21448, 22572), compute-name=) - Creating connection
+[0m20:30:27.107163 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Acquired connection on thread (21448, 28184), using default compute resource
+[0m20:30:27.108162 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_silver'
+[0m20:30:27.123162 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.015999555587768555s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Checking idleness
+[0m20:30:27.124668 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Acquired connection on thread (21448, 22572), using default compute resource
+[0m20:30:27.125677 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.017505645751953125s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Retrieving connection
+[0m20:30:27.129675 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.004009246826171875s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Checking idleness
+[0m20:30:27.129675 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.005006313323974609s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Retrieving connection
+[0m20:30:27.130677 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.023514270782470703s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Checking idleness
+[0m20:30:27.130677 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.023514270782470703s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Retrieving connection
+[0m20:30:27.131675 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.007007122039794922s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Checking idleness
+[0m20:30:27.131675 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:30:27.132675 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.008006811141967773s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Retrieving connection
+[0m20:30:27.132675 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_gold"
+[0m20:30:27.132675 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:30:27.133675 [debug] [ThreadPool]: On list_workspace_airbnb_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_gold"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_gold'
+    
+  
+[0m20:30:27.133675 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_silver"
+[0m20:30:27.134677 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:30:27.134677 [debug] [ThreadPool]: On list_workspace_airbnb_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_silver"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_silver'
+    
+  
+[0m20:30:27.135674 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:30:27.839618 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=01f120c6-f355-15d9-bca8-003ca67b1e88, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 28184), compute-name=) - Connection created
+[0m20:30:27.840618 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f355-15d9-bca8-003ca67b1e88, command-id=Unknown) - Created cursor
+[0m20:30:27.844619 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=01f120c6-f357-1f54-b3fd-2900a8ccfdbc, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 22572), compute-name=) - Connection created
+[0m20:30:27.844619 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f357-1f54-b3fd-2900a8ccfdbc, command-id=Unknown) - Created cursor
+[0m20:30:28.450512 [debug] [ThreadPool]: SQL status: OK in 1.310 seconds
+[0m20:30:28.454510 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f357-1f54-b3fd-2900a8ccfdbc, command-id=01f120c6-f373-1ac3-ba4a-b2fe5a9ae1a2) - Closing cursor
+[0m20:30:28.455524 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020260720, session-id=01f120c6-f357-1f54-b3fd-2900a8ccfdbc, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(21448, 22572), compute-name=) - Released connection
+[0m20:30:28.488515 [debug] [ThreadPool]: SQL status: OK in 1.350 seconds
+[0m20:30:28.492530 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c6-f355-15d9-bca8-003ca67b1e88, command-id=01f120c6-f372-1c4e-a315-a03951014b15) - Closing cursor
+[0m20:30:28.493529 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1871020261344, session-id=01f120c6-f355-15d9-bca8-003ca67b1e88, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(21448, 28184), compute-name=) - Released connection
+[0m20:30:28.496048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3A1793230>]}
+[0m20:30:28.497063 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=3.382077217102051s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Checking idleness
+[0m20:30:28.497063 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=3.382077217102051s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Retrieving connection
+[0m20:30:28.498060 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=3.3830747604370117s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Checking idleness
+[0m20:30:28.499043 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=3.3840577602386475s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Retrieving connection
+[0m20:30:28.500047 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:30:28.501045 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:30:28.502044 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(21448, 30116), compute-name=) - Released connection
+[0m20:30:28.503045 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:30:28.503045 [info ] [MainThread]: 
+[0m20:30:28.509073 [debug] [Thread-1 (]: Began running node model.airbnb_analytics.dim_date
+[0m20:30:28.510044 [info ] [Thread-1 (]: 1 of 1 START sql table model airbnb_gold.dim_date .............................. [RUN]
+[0m20:30:28.511044 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=None, name=model.airbnb_analytics.dim_date, idle-time=0s, acquire-count=0, language=None, thread-identifier=(21448, 36884), compute-name=) - Creating connection
+[0m20:30:28.512048 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.airbnb_analytics.dim_date'
+[0m20:30:28.512048 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=None, name=model.airbnb_analytics.dim_date, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Acquired connection on thread (21448, 36884), using default compute resource for model '`workspace`.`airbnb_gold`.`dim_date`'
+[0m20:30:28.513075 [debug] [Thread-1 (]: Began compiling node model.airbnb_analytics.dim_date
+[0m20:30:28.542068 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=None, name=model.airbnb_analytics.dim_date, idle-time=0.03002023696899414s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Checking idleness
+[0m20:30:28.543059 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=None, name=model.airbnb_analytics.dim_date, idle-time=0.031011581420898438s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Retrieving connection
+[0m20:30:28.544043 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:30:29.226296 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Connection created
+[0m20:30:29.232297 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.0070002079010009766s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Checking idleness
+[0m20:30:29.233300 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.00800323486328125s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Retrieving connection
+[0m20:30:29.234300 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.009002685546875s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Checking idleness
+[0m20:30:29.234300 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.009002685546875s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Retrieving connection
+[0m20:30:29.236297 [debug] [Thread-1 (]: Spark adapter: NotImplemented: add_begin_query
+[0m20:30:29.237298 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.dim_date"
+[0m20:30:29.238300 [debug] [Thread-1 (]: On model.airbnb_analytics.dim_date: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.dim_date"} */
+
+
+        select timestampdiff(day, date_trunc('day', cast('2009-06-20' as date)), date_trunc('day', cast('2026-02-20' as date)))
+[0m20:30:29.238300 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, command-id=Unknown) - Created cursor
+[0m20:30:29.614566 [debug] [Thread-1 (]: SQL status: OK in 0.380 seconds
+[0m20:30:29.617551 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, command-id=01f120c6-f448-14ec-8d81-9d5be5523fad) - Closing cursor
+[0m20:30:29.633564 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.4082672595977783s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Checking idleness
+[0m20:30:29.634553 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.4082672595977783s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Retrieving connection
+[0m20:30:29.650551 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb_analytics.dim_date"
+[0m20:30:29.651570 [debug] [Thread-1 (]: Began executing node model.airbnb_analytics.dim_date
+[0m20:30:29.666831 [debug] [Thread-1 (]: MATERIALIZING TABLE
+[0m20:30:29.712218 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb_analytics.dim_date"
+[0m20:30:29.713217 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.48792052268981934s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Checking idleness
+[0m20:30:29.714221 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.4889240264892578s, acquire-count=1, language=sql, thread-identifier=(21448, 36884), compute-name=) - Retrieving connection
+[0m20:30:29.714221 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.dim_date"
+[0m20:30:29.715248 [debug] [Thread-1 (]: On model.airbnb_analytics.dim_date: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.dim_date"} */
+
+  
+    
+        create or replace table `workspace`.`airbnb_gold`.`dim_date`
+      
+      using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      
+
+
+WITH date_spine AS (
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+     + 
+    
+    p11.generated_number * power(2, 11)
+     + 
+    
+    p12.generated_number * power(2, 12)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+     cross join 
+    
+    p as p11
+     cross join 
+    
+    p as p12
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 6089
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        timestampadd(day, row_number() over (order by 1) - 1, cast('2009-06-20' as date))
+    ) as date_day
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_day <= cast('2026-02-20' as date)
+
+)
+
+select * from filtered
+
+
+),
+final AS (
+    SELECT
+        -- Surrogate Key
+        md5(cast(concat(coalesce(cast(date_day as string), '_dbt_utils_surrogate_key_null_')) as string)) AS date_key,
+        
+        -- Natural Key
+        date_day AS date,
+        
+        -- Componentes de data
+        YEAR(date_day) AS year,
+        QUARTER(date_day) AS quarter,
+        MONTH(date_day) AS month,
+        DAYOFMONTH(date_day) AS day,
+        DAYOFWEEK(date_day) AS day_of_week,
+        DAYOFYEAR(date_day) AS day_of_year,
+        WEEKOFYEAR(date_day) AS week_of_year,
+        
+        -- Nomes formatados
+        DATE_FORMAT(date_day, 'MMMM') AS month_name,
+        DATE_FORMAT(date_day, 'EEEE') AS day_name,
+        CONCAT('Q', QUARTER(date_day), ' ', YEAR(date_day)) AS quarter_name,
+        
+        -- Abreviações
+        DATE_FORMAT(date_day, 'MMM') AS month_name_short,
+        DATE_FORMAT(date_day, 'EEE') AS day_name_short,
+        
+        -- Flags úteis para análise
+        CASE WHEN DAYOFWEEK(date_day) IN (1, 7) THEN TRUE ELSE FALSE END AS is_weekend,
+        CASE WHEN DAYOFWEEK(date_day) BETWEEN 2 AND 6 THEN TRUE ELSE FALSE END AS is_weekday,
+        
+        -- Identificar primeiro/último dia do mês
+        CASE WHEN DAYOFMONTH(date_day) = 1 THEN TRUE ELSE FALSE END AS is_first_day_of_month,
+        CASE WHEN DAYOFMONTH(date_day) = DAYOFMONTH(LAST_DAY(date_day)) THEN TRUE ELSE FALSE END AS is_last_day_of_month,
+        
+        -- Fiscal Year (exemplo: ano fiscal começa em Julho)
+        CASE 
+            WHEN MONTH(date_day) >= 7 THEN YEAR(date_day) + 1
+            ELSE YEAR(date_day)
+        END AS fiscal_year,
+        
+        -- Períodos relativos (útil para filtros de BI)
+        CASE 
+            WHEN date_day = CURRENT_DATE() THEN 'Today'
+            WHEN date_day = CURRENT_DATE() - INTERVAL 1 DAY THEN 'Yesterday'
+            WHEN date_day BETWEEN CURRENT_DATE() - INTERVAL 7 DAYS AND CURRENT_DATE() - INTERVAL 1 DAY THEN 'Last 7 Days'
+            WHEN date_day BETWEEN CURRENT_DATE() - INTERVAL 30 DAYS AND CURRENT_DATE() - INTERVAL 1 DAY THEN 'Last 30 Days'
+            WHEN YEAR(date_day) = YEAR(CURRENT_DATE()) AND MONTH(date_day) = MONTH(CURRENT_DATE()) THEN 'Current Month'
+            WHEN YEAR(date_day) = YEAR(CURRENT_DATE()) THEN 'Current Year'
+            ELSE 'Historical'
+        END AS relative_period,
+        
+        -- Metadata
+        CURRENT_TIMESTAMP() AS dbt_updated_at
+        
+    FROM date_spine
+)
+
+SELECT * FROM final
+  
+[0m20:30:29.715248 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, command-id=Unknown) - Created cursor
+[0m20:30:34.493909 [debug] [Thread-1 (]: SQL status: OK in 4.780 seconds
+[0m20:30:34.494909 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, command-id=01f120c6-f490-177a-852d-ba0a53e3a7f3) - Closing cursor
+[0m20:30:34.544425 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(21448, 36884), compute-name=) - Released connection
+[0m20:30:34.544425 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1871017028368, session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855, name=model.airbnb_analytics.dim_date, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(21448, 36884), compute-name=) - Released connection
+[0m20:30:34.547425 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c0ad38a7-61ad-44b1-8087-df4690e8a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FE128290>]}
+[0m20:30:34.548424 [info ] [Thread-1 (]: 1 of 1 OK created sql table model airbnb_gold.dim_date ......................... [[32mOK[0m in 6.03s]
+[0m20:30:34.549423 [debug] [Thread-1 (]: Finished running node model.airbnb_analytics.dim_date
+[0m20:30:34.551424 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=6.049380540847778s, acquire-count=0, language=None, thread-identifier=(21448, 30116), compute-name=) - Checking idleness
+[0m20:30:34.552424 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=6.05038046836853s, acquire-count=0, language=None, thread-identifier=(21448, 30116), compute-name=) - Reusing connection previously named master
+[0m20:30:34.552424 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=6.05038046836853s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Acquired connection on thread (21448, 30116), using default compute resource
+[0m20:30:34.553424 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=6.051380634307861s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Checking idleness
+[0m20:30:34.553424 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=None, name=master, idle-time=6.051380634307861s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Retrieving connection
+[0m20:30:34.553424 [debug] [MainThread]: On master: ROLLBACK
+[0m20:30:34.554423 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:30:35.291656 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=01f120c6-f7c6-11e6-8396-70dd214f18e3, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Connection created
+[0m20:30:35.292661 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:30:35.292661 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=01f120c6-f7c6-11e6-8396-70dd214f18e3, name=master, idle-time=0.0010051727294921875s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Checking idleness
+[0m20:30:35.293660 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=01f120c6-f7c6-11e6-8396-70dd214f18e3, name=master, idle-time=0.0020036697387695312s, acquire-count=1, language=None, thread-identifier=(21448, 30116), compute-name=) - Retrieving connection
+[0m20:30:35.293660 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:30:35.294658 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:30:35.294658 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1871022407120, session-id=01f120c6-f7c6-11e6-8396-70dd214f18e3, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(21448, 30116), compute-name=) - Released connection
+[0m20:30:35.294658 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:30:35.295657 [debug] [MainThread]: On master: ROLLBACK
+[0m20:30:35.295657 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:30:35.296657 [debug] [MainThread]: On master: Close
+[0m20:30:35.296657 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-f7c6-11e6-8396-70dd214f18e3) - Closing connection
+[0m20:30:35.504071 [debug] [MainThread]: Connection 'list_workspace' was properly closed.
+[0m20:30:35.505072 [debug] [MainThread]: On list_workspace: Close
+[0m20:30:35.506085 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-f2b8-1144-91aa-96af55609c52) - Closing connection
+[0m20:30:35.711018 [debug] [MainThread]: Connection 'list_workspace_airbnb_gold' was properly closed.
+[0m20:30:35.711018 [debug] [MainThread]: On list_workspace_airbnb_gold: ROLLBACK
+[0m20:30:35.712013 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:30:35.712013 [debug] [MainThread]: On list_workspace_airbnb_gold: Close
+[0m20:30:35.712013 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-f355-15d9-bca8-003ca67b1e88) - Closing connection
+[0m20:30:35.916075 [debug] [MainThread]: Connection 'list_workspace_airbnb_silver' was properly closed.
+[0m20:30:35.917078 [debug] [MainThread]: On list_workspace_airbnb_silver: ROLLBACK
+[0m20:30:35.917078 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:30:35.917078 [debug] [MainThread]: On list_workspace_airbnb_silver: Close
+[0m20:30:35.918080 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-f357-1f54-b3fd-2900a8ccfdbc) - Closing connection
+[0m20:30:36.115947 [debug] [MainThread]: Connection 'model.airbnb_analytics.dim_date' was properly closed.
+[0m20:30:36.115947 [debug] [MainThread]: On model.airbnb_analytics.dim_date: ROLLBACK
+[0m20:30:36.116947 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:30:36.116947 [debug] [MainThread]: On model.airbnb_analytics.dim_date: Close
+[0m20:30:36.117966 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c6-f42a-1e4a-abc9-ed3f2389b855) - Closing connection
+[0m20:30:36.318109 [info ] [MainThread]: 
+[0m20:30:36.318109 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 11.20 seconds (11.20s).
+[0m20:30:36.320123 [debug] [MainThread]: Command end result
+[0m20:30:36.400133 [info ] [MainThread]: 
+[0m20:30:36.401116 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:30:36.402183 [info ] [MainThread]: 
+[0m20:30:36.402183 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:30:36.404185 [debug] [MainThread]: Command `dbt run` succeeded at 20:30:36.403188 after 13.84 seconds
+[0m20:30:36.404185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FBD8B1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3A1AFCE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3FDB57170>]}
+[0m20:30:36.405184 [debug] [MainThread]: Flushing usage events
+[0m20:31:05.557909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F50416330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F50417D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F50416210>]}
+
+
+============================== 20:31:05.561910 | f93c69bc-9305-4dd0-b1c2-9d50eccbde5d ==============================
+[0m20:31:05.561910 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:31:05.562913 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics', 'log_path': 'D:\\material_aulas\\airbnb-analytics-engineering\\airbnb_analytics\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select fact_reviews', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:31:05.696681 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:31:05.697677 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:31:05.697677 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:31:06.960540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F72D4D6A0>]}
+[0m20:31:07.024538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F50978BF0>]}
+[0m20:31:07.025543 [info ] [MainThread]: Registered adapter: databricks=1.8.5
+[0m20:31:07.353667 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:31:07.558533 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:31:07.559533 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:31:07.565534 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.airbnb_analytics.bronze
+[0m20:31:07.608782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F72D4ECF0>]}
+[0m20:31:07.832600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F732102F0>]}
+[0m20:31:07.832600 [info ] [MainThread]: Found 9 models, 70 data tests, 3 sources, 983 macros
+[0m20:31:07.833604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F732C1F40>]}
+[0m20:31:07.835601 [info ] [MainThread]: 
+[0m20:31:07.836604 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37200, 39796), compute-name=) - Creating connection
+[0m20:31:07.837601 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:31:07.838603 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Acquired connection on thread (37200, 39796), using default compute resource
+[0m20:31:07.839607 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=None, name=list_workspace, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37200, 38592), compute-name=) - Creating connection
+[0m20:31:07.839607 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m20:31:07.840601 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38592), compute-name=) - Acquired connection on thread (37200, 38592), using default compute resource
+[0m20:31:07.840601 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38592), compute-name=) - Checking idleness
+[0m20:31:07.840601 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=None, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38592), compute-name=) - Retrieving connection
+[0m20:31:07.841701 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m20:31:07.841701 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m20:31:07.841701 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:08.561726 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=01f120c7-0b9b-1a92-a506-0fbd62a29718, name=list_workspace, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38592), compute-name=) - Connection created
+[0m20:31:08.561726 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0b9b-1a92-a506-0fbd62a29718, command-id=Unknown) - Created cursor
+[0m20:31:08.842715 [debug] [ThreadPool]: SQL status: OK in 1.000 seconds
+[0m20:31:08.846703 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0b9b-1a92-a506-0fbd62a29718, command-id=01f120c7-0bb8-1a46-82d9-e251a8bed4b8) - Closing cursor
+[0m20:31:08.847706 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646907593776, session-id=01f120c7-0b9b-1a92-a506-0fbd62a29718, name=list_workspace, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37200, 38592), compute-name=) - Released connection
+[0m20:31:08.856732 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37200, 36712), compute-name=) - Creating connection
+[0m20:31:08.857718 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37200, 38684), compute-name=) - Creating connection
+[0m20:31:08.858715 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_silver'
+[0m20:31:08.858715 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_airbnb_gold'
+[0m20:31:08.859701 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Acquired connection on thread (37200, 36712), using default compute resource
+[0m20:31:08.860702 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Acquired connection on thread (37200, 38684), using default compute resource
+[0m20:31:08.876716 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.016000032424926758s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Checking idleness
+[0m20:31:08.880715 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.021013975143432617s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Retrieving connection
+[0m20:31:08.881701 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.021013975143432617s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Checking idleness
+[0m20:31:08.881701 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.022000551223754883s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Retrieving connection
+[0m20:31:08.882717 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.023015737533569336s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Checking idleness
+[0m20:31:08.882717 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=None, name=list_workspace_airbnb_silver, idle-time=0.023015737533569336s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Retrieving connection
+[0m20:31:08.883715 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.02401423454284668s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Checking idleness
+[0m20:31:08.884702 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:31:08.884702 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=None, name=list_workspace_airbnb_gold, idle-time=0.02500152587890625s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Retrieving connection
+[0m20:31:08.885703 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_silver"
+[0m20:31:08.885703 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:31:08.886702 [debug] [ThreadPool]: On list_workspace_airbnb_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_silver"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_silver'
+    
+  
+[0m20:31:08.887716 [debug] [ThreadPool]: Using databricks connection "list_workspace_airbnb_gold"
+[0m20:31:08.887716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:08.888716 [debug] [ThreadPool]: On list_workspace_airbnb_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "connection_name": "list_workspace_airbnb_gold"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'workspace'
+      and table_schema = 'airbnb_gold'
+    
+  
+[0m20:31:08.888716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:09.645574 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=01f120c7-0c41-1f8f-ba0c-ca920b0c3309, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 38684), compute-name=) - Connection created
+[0m20:31:09.645574 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0c41-1f8f-ba0c-ca920b0c3309, command-id=Unknown) - Created cursor
+[0m20:31:09.648568 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=01f120c7-0c42-1287-90dc-0baf06aaf43a, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 36712), compute-name=) - Connection created
+[0m20:31:09.648568 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0c42-1287-90dc-0baf06aaf43a, command-id=Unknown) - Created cursor
+[0m20:31:10.211221 [debug] [ThreadPool]: SQL status: OK in 1.320 seconds
+[0m20:31:10.215218 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0c41-1f8f-ba0c-ca920b0c3309, command-id=01f120c7-0c5e-11e8-b856-af111e1b7837) - Closing cursor
+[0m20:31:10.216223 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646905167600, session-id=01f120c7-0c41-1f8f-ba0c-ca920b0c3309, name=list_workspace_airbnb_gold, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37200, 38684), compute-name=) - Released connection
+[0m20:31:10.254151 [debug] [ThreadPool]: SQL status: OK in 1.370 seconds
+[0m20:31:10.258154 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f120c7-0c42-1287-90dc-0baf06aaf43a, command-id=01f120c7-0c5e-1972-a4c1-6d560f5bad11) - Closing cursor
+[0m20:31:10.258154 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=1646904018176, session-id=01f120c7-0c42-1287-90dc-0baf06aaf43a, name=list_workspace_airbnb_silver, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37200, 36712), compute-name=) - Released connection
+[0m20:31:10.260153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F735A3740>]}
+[0m20:31:10.261152 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=2.422548770904541s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Checking idleness
+[0m20:31:10.262152 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=2.423548936843872s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Retrieving connection
+[0m20:31:10.262152 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=2.423548936843872s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Checking idleness
+[0m20:31:10.263152 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=2.424548864364624s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Retrieving connection
+[0m20:31:10.263152 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:31:10.264155 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:31:10.264155 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37200, 39796), compute-name=) - Released connection
+[0m20:31:10.265153 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:31:10.266466 [info ] [MainThread]: 
+[0m20:31:10.271474 [debug] [Thread-1 (]: Began running node model.airbnb_analytics.fact_reviews
+[0m20:31:10.272473 [info ] [Thread-1 (]: 1 of 1 START sql incremental model airbnb_gold.fact_reviews .................... [RUN]
+[0m20:31:10.274475 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0s, acquire-count=0, language=None, thread-identifier=(37200, 32964), compute-name=) - Creating connection
+[0m20:31:10.274475 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.airbnb_analytics.fact_reviews'
+[0m20:31:10.275474 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Acquired connection on thread (37200, 32964), using default compute resource for model '`workspace`.`airbnb_gold`.`fact_reviews`'
+[0m20:31:10.276477 [debug] [Thread-1 (]: Began compiling node model.airbnb_analytics.fact_reviews
+[0m20:31:10.306493 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbnb_analytics.fact_reviews"
+[0m20:31:10.308494 [debug] [Thread-1 (]: Began executing node model.airbnb_analytics.fact_reviews
+[0m20:31:10.391579 [debug] [Thread-1 (]: Writing runtime sql for node "model.airbnb_analytics.fact_reviews"
+[0m20:31:10.393580 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11810517311096191s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Checking idleness
+[0m20:31:10.393580 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11810517311096191s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Retrieving connection
+[0m20:31:10.394605 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11810517311096191s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Checking idleness
+[0m20:31:10.394605 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=None, name=model.airbnb_analytics.fact_reviews, idle-time=0.11913084983825684s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Retrieving connection
+[0m20:31:10.394605 [debug] [Thread-1 (]: Spark adapter: NotImplemented: add_begin_query
+[0m20:31:10.394605 [debug] [Thread-1 (]: Using databricks connection "model.airbnb_analytics.fact_reviews"
+[0m20:31:10.395601 [debug] [Thread-1 (]: On model.airbnb_analytics.fact_reviews: /* {"app": "dbt", "dbt_version": "1.8.7", "dbt_databricks_version": "1.8.5", "databricks_sql_connector_version": "3.1.2", "profile_name": "airbnb_analytics", "target_name": "dev", "node_id": "model.airbnb_analytics.fact_reviews"} */
+
+  
+    
+        create or replace table `workspace`.`airbnb_gold`.`fact_reviews`
+      
+      using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      
+
+WITH stg_reviews AS (
+    SELECT * FROM `workspace`.`airbnb_silver`.`stg_reviews`
+    
+),
+
+dim_listing AS (
+    SELECT 
+        listing_key,
+        listing_id,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_listing`
+),
+
+dim_host AS (
+    SELECT
+        host_key,
+        host_id
+    FROM `workspace`.`airbnb_gold`.`dim_host`
+),
+
+dim_date AS (
+    SELECT
+        date_key,
+        date
+    FROM `workspace`.`airbnb_gold`.`dim_date`
+),
+
+final AS (
+    SELECT
+        md5(cast(concat(coalesce(cast(r.listing_id as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.review_date as string), '_dbt_utils_surrogate_key_null_'), '-', coalesce(cast(r.reviewer_name as string), '_dbt_utils_surrogate_key_null_')) as string)) AS review_key,
+        
+        dl.listing_key,
+        dh.host_key,
+        dd.date_key,
+        
+        r.listing_id,
+        r.review_date,
+        
+        r.reviewer_name,
+        
+        1 AS review_count,  -- Para COUNT em agregações
+        r.review_length,
+        r.word_count,
+        
+        -- Flags para agregações condicionais
+        CASE WHEN r.sentiment_category = 'Positive' THEN 1 ELSE 0 END AS is_positive,
+        CASE WHEN r.sentiment_category = 'Negative' THEN 1 ELSE 0 END AS is_negative,
+        CASE WHEN r.sentiment_category = 'Neutral' THEN 1 ELSE 0 END AS is_neutral,
+        
+        CASE WHEN r.mentions_clean THEN 1 ELSE 0 END AS mentions_clean_flag,
+        CASE WHEN r.mentions_location THEN 1 ELSE 0 END AS mentions_location_flag,
+        CASE WHEN r.mentions_host THEN 1 ELSE 0 END AS mentions_host_flag,
+        
+        -- Atributos não-aditivos (para contexto)
+        r.sentiment_category,
+        r.review_length_category,
+        r.review_comments,  -- Pode ser útil para drill-down
+        
+        -- Métricas calculadas
+        CASE 
+            WHEN r.word_count > 0 THEN ROUND(r.review_length * 1.0 / r.word_count, 2)
+            ELSE 0
+        END AS avg_word_length,
+        
+        -- Metadata
+        r.dbt_loaded_at,
+        CURRENT_TIMESTAMP() AS dbt_updated_at
+        
+    FROM stg_reviews r
+    INNER JOIN dim_listing dl ON r.listing_id = dl.listing_id
+    INNER JOIN dim_host dh ON dl.host_id = dh.host_id
+    LEFT JOIN dim_date dd ON CAST(r.review_date AS DATE) = dd.date
+)
+
+SELECT * FROM final
+  
+[0m20:31:10.395601 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:31:11.098393 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=1, language=sql, thread-identifier=(37200, 32964), compute-name=) - Connection created
+[0m20:31:11.098393 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817, command-id=Unknown) - Created cursor
+[0m20:31:17.856467 [debug] [Thread-1 (]: SQL status: OK in 7.460 seconds
+[0m20:31:17.858451 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817, command-id=01f120c7-0d3b-1483-8d4f-bdf755d046ed) - Closing cursor
+[0m20:31:18.128435 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(37200, 32964), compute-name=) - Released connection
+[0m20:31:18.129434 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=1646907808016, session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817, name=model.airbnb_analytics.fact_reviews, idle-time=0.0s, acquire-count=0, language=sql, thread-identifier=(37200, 32964), compute-name=) - Released connection
+[0m20:31:18.131432 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f93c69bc-9305-4dd0-b1c2-9d50eccbde5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F4FCC0260>]}
+[0m20:31:18.131432 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model airbnb_gold.fact_reviews ............... [[32mOK[0m in 7.86s]
+[0m20:31:18.133432 [debug] [Thread-1 (]: Finished running node model.airbnb_analytics.fact_reviews
+[0m20:31:18.135434 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=7.871279001235962s, acquire-count=0, language=None, thread-identifier=(37200, 39796), compute-name=) - Checking idleness
+[0m20:31:18.136434 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=7.872279167175293s, acquire-count=0, language=None, thread-identifier=(37200, 39796), compute-name=) - Reusing connection previously named master
+[0m20:31:18.137435 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=7.872279167175293s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Acquired connection on thread (37200, 39796), using default compute resource
+[0m20:31:18.137435 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=7.87328028678894s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Checking idleness
+[0m20:31:18.138435 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=None, name=master, idle-time=7.874280214309692s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Retrieving connection
+[0m20:31:18.138435 [debug] [MainThread]: On master: ROLLBACK
+[0m20:31:18.139445 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:31:18.867141 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=01f120c7-11c1-13f4-9f66-fdbbee8928bf, name=master, idle-time=0.0s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Connection created
+[0m20:31:18.868156 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:31:18.868156 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=01f120c7-11c1-13f4-9f66-fdbbee8928bf, name=master, idle-time=0.0010142326354980469s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Checking idleness
+[0m20:31:18.869138 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=01f120c7-11c1-13f4-9f66-fdbbee8928bf, name=master, idle-time=0.0019965171813964844s, acquire-count=1, language=None, thread-identifier=(37200, 39796), compute-name=) - Retrieving connection
+[0m20:31:18.869138 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m20:31:18.870153 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m20:31:18.870153 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=1646907768464, session-id=01f120c7-11c1-13f4-9f66-fdbbee8928bf, name=master, idle-time=0.0s, acquire-count=0, language=None, thread-identifier=(37200, 39796), compute-name=) - Released connection
+[0m20:31:18.871153 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:31:18.871153 [debug] [MainThread]: On master: ROLLBACK
+[0m20:31:18.871153 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:31:18.872153 [debug] [MainThread]: On master: Close
+[0m20:31:18.872153 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c7-11c1-13f4-9f66-fdbbee8928bf) - Closing connection
+[0m20:31:19.067356 [debug] [MainThread]: Connection 'list_workspace' was properly closed.
+[0m20:31:19.067356 [debug] [MainThread]: On list_workspace: Close
+[0m20:31:19.068381 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c7-0b9b-1a92-a506-0fbd62a29718) - Closing connection
+[0m20:31:19.265750 [debug] [MainThread]: Connection 'list_workspace_airbnb_silver' was properly closed.
+[0m20:31:19.266750 [debug] [MainThread]: On list_workspace_airbnb_silver: ROLLBACK
+[0m20:31:19.266750 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:31:19.267750 [debug] [MainThread]: On list_workspace_airbnb_silver: Close
+[0m20:31:19.267750 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c7-0c42-1287-90dc-0baf06aaf43a) - Closing connection
+[0m20:31:19.467162 [debug] [MainThread]: Connection 'list_workspace_airbnb_gold' was properly closed.
+[0m20:31:19.468178 [debug] [MainThread]: On list_workspace_airbnb_gold: ROLLBACK
+[0m20:31:19.468178 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:31:19.469175 [debug] [MainThread]: On list_workspace_airbnb_gold: Close
+[0m20:31:19.469175 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c7-0c41-1f8f-ba0c-ca920b0c3309) - Closing connection
+[0m20:31:19.675426 [debug] [MainThread]: Connection 'model.airbnb_analytics.fact_reviews' was properly closed.
+[0m20:31:19.676430 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: ROLLBACK
+[0m20:31:19.676430 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:31:19.677431 [debug] [MainThread]: On model.airbnb_analytics.fact_reviews: Close
+[0m20:31:19.678694 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f120c7-0d1f-1a00-b5e7-fd9d37e1d817) - Closing connection
+[0m20:31:19.881843 [info ] [MainThread]: 
+[0m20:31:19.882837 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 12.05 seconds (12.05s).
+[0m20:31:19.884822 [debug] [MainThread]: Command end result
+[0m20:31:19.955105 [info ] [MainThread]: 
+[0m20:31:19.956110 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:31:19.957127 [info ] [MainThread]: 
+[0m20:31:19.958113 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:31:19.959113 [debug] [MainThread]: Command `dbt run` succeeded at 20:31:19.959113 after 14.53 seconds
+[0m20:31:19.960138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F502DE0C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F7358E7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F50166510>]}
+[0m20:31:19.960138 [debug] [MainThread]: Flushing usage events

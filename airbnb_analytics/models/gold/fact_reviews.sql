@@ -79,7 +79,7 @@ final AS (
     FROM stg_reviews r
     INNER JOIN dim_listing dl ON r.listing_id = dl.listing_id
     INNER JOIN dim_host dh ON dl.host_id = dh.host_id
-    LEFT JOIN dim_date dd ON r.review_date = dd.date
+    LEFT JOIN dim_date dd ON CAST(r.review_date AS DATE) = dd.date
 )
 
 SELECT * FROM final

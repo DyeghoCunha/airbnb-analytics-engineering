@@ -5,16 +5,16 @@ airbnb_analytics:
       type: databricks
       catalog: workspace
       schema: airbnb  
-      host: ${{ secrets.DATABRICKS_HOST }}
-      http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
-      token: ${{ secrets.DATABRICKS_TOKEN }}
+      host: dbc-bf88daea-a04e.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/8b8af9d912dae651
+      token: dapi752551efb8e89c8911e55821d35e3a78
       threads: 4
       
     prod:
       type: databricks
       catalog: workspace
       schema: airbnb
-      host: ${{ secrets.DATABRICKS_HOST }}
-      http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
-      token: ${{ secrets.DATABRICKS_TOKEN }}
+      host: dbc-bf88daea-a04e.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/8b8af9d912dae651
+      token: dapi752551efb8e89c8911e55821d35e3a78
       threads: 8
