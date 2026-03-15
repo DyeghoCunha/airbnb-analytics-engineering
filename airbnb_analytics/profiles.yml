@@ -1,0 +1,20 @@
+airbnb_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      catalog: workspace
+      schema: airbnb  
+      host: ${{ secrets.DATABRICKS_HOST }}
+      http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+      token: ${{ secrets.DATABRICKS_TOKEN }}
+      threads: 4
+      
+    prod:
+      type: databricks
+      catalog: workspace
+      schema: airbnb
+      host: ${{ secrets.DATABRICKS_HOST }}
+      http_path: ${{ secrets.DATABRICKS_HTTP_PATH }}
+      token: ${{ secrets.DATABRICKS_TOKEN }}
+      threads: 8

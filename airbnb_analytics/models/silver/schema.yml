@@ -140,4 +140,50 @@ models:
 tests:
   - name: test_hosts_have_listings
     description: "Ensure all hosts in stg_hosts have at least one listing"
-    # Este é um exemplo de teste custom que você pode criar
+
+
+  # Testes customizados adicionais
+  - name: stg_listings
+    tests:
+      - no_nulls_in_columns:
+          column_names: ['listing_id', 'host_id', 'listing_name', 'price']
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - listing_id
+            - listing_name
+    
+    columns:
+      - name: price
+        tests:
+          - accepted_range:
+              min_value: 0
+              max_value: 50000
+              config:
+                severity: warn  # Apenas avisa, não falha
+      
+      - name: minimum_nights
+        tests:
+          - accepted_range:
+              min_value: 1
+              max_value: 365
+
+  - name: stg_reviews
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - listing_id
+            - review_date
+            - reviewer_name
+    
+    columns:
+      - name: review_length
+        tests:
+          - accepted_range:
+              min_value: 1
+              max_value: 10000
+      
+      - name: listing_id
+        tests:
+          - referential_integrity:
+              to: ref('stg_listings')
+              field: listing_id
